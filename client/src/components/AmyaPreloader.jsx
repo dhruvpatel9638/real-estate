@@ -36,24 +36,35 @@ export default function AmyaPreloader({ onComplete }) {
           <div className="w-full" />
 
           {/* Center Brand Identity Container */}
-          <div className="flex flex-col items-center justify-center my-auto text-center gap-10 max-w-xl">
+          <div className="flex flex-col items-center justify-center my-auto text-center gap-6 max-w-xl">
             {/* Center Logo Container with breathing scale */}
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: [0.98, 1.04, 0.98], opacity: 1 }}
+              animate={{ scale: [0.98, 1.03, 0.98], opacity: 1 }}
               transition={{
                 scale: { repeat: Infinity, duration: 2.5, ease: 'easeInOut' },
                 opacity: { duration: 0.8, ease: 'easeOut' },
               }}
               className="flex flex-col items-center justify-center relative"
             >
-              {/* Amya Growth Logo PNG Image from Assets */}
+              {/* Amya Growth Logo PNG Image from Assets (Increased Size) */}
               <img
                 src={amyaLogoImg}
                 alt="Amya Growth Logo"
-                className="h-32 sm:h-44 w-auto object-contain drop-shadow-[0_12px_24px_rgba(39,83,84,0.12)]"
+                className="h-44 sm:h-64 md:h-72 w-auto object-contain drop-shadow-[0_16px_32px_rgba(39,83,84,0.12)]"
               />
             </motion.div>
+
+            {/* Branding Text directly below logo */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-sm sm:text-base font-medium tracking-wide mt-1"
+              style={{ color: '#275354', fontFamily: "'Outfit', 'Inter', sans-serif" }}
+            >
+              Website Crafted with <span className="text-red-500 inline-block animate-pulse">❤️</span> by Amya Growth
+            </motion.p>
 
             {/* Circle of Teal-Cyan Dots Loader */}
             <motion.div
