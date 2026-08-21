@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
+import AmyaPreloader from './components/AmyaPreloader';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -20,6 +21,7 @@ import Footer from './components/Footer';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
+  const [amyaDone, setAmyaDone] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const lenisRef = useRef(null);
 
@@ -57,7 +59,8 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-black text-white selection:bg-[#7a0c07] selection:text-white">
-      <Preloader onComplete={() => setLoaded(true)} />
+      {!amyaDone && <AmyaPreloader onComplete={() => setAmyaDone(true)} />}
+      {amyaDone && <Preloader onComplete={() => setLoaded(true)} />}
       <Navbar />
       <main>
         <Hero />
