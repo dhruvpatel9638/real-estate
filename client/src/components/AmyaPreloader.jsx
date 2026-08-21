@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import amyaLogoImg from '../Amya LOGO png.png';
 
 export default function AmyaPreloader({ onComplete }) {
   const [isFinished, setIsFinished] = useState(false);
@@ -39,49 +40,19 @@ export default function AmyaPreloader({ onComplete }) {
             {/* Center Logo Container with breathing scale */}
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
+              animate={{ scale: [0.98, 1.04, 0.98], opacity: 1 }}
+              transition={{
+                scale: { repeat: Infinity, duration: 2.5, ease: 'easeInOut' },
+                opacity: { duration: 0.8, ease: 'easeOut' },
+              }}
               className="flex flex-col items-center justify-center relative"
             >
-              {/* Optional AMYALOGO.png Image if available */}
+              {/* Amya Growth Logo PNG Image */}
               <img
-                src="/AMYALOGO.png"
-                alt="Amya Growth"
-                className="h-20 md:h-28 w-auto object-contain mb-2"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
+                src={amyaLogoImg}
+                alt="Amya Growth Logo"
+                className="h-28 sm:h-40 w-auto object-contain drop-shadow-[0_10px_20px_rgba(39,83,84,0.12)]"
               />
-
-              {/* Exact Recreated Amya Growth Brand Logo Component */}
-              <div className="flex flex-col items-center justify-center filter drop-shadow-[0_12px_20px_rgba(39,83,84,0.08)]">
-                {/* 'Amya' - Ultra-Bold Geometric Sans with Exact 4-Color Block Accent */}
-                <h1
-                  className="text-6xl sm:text-8xl tracking-tight leading-none"
-                  style={{
-                    fontFamily: "'Outfit', 'Syne', sans-serif",
-                    fontWeight: 900,
-                    letterSpacing: '-0.02em',
-                    background: 'linear-gradient(90deg, #275354 0%, #275354 36%, #468585 36%, #468585 62%, #275354 62%, #275354 82%, #529696 82%, #529696 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
-                  Amya
-                </h1>
-
-                {/* 'Growth' - Thin Elegant Spaced Subtitle */}
-                <span
-                  className="text-xl sm:text-2xl font-light tracking-[0.45em] mt-1 pl-2"
-                  style={{
-                    color: '#275354',
-                    fontFamily: "'Outfit', sans-serif",
-                    fontWeight: 200,
-                  }}
-                >
-                  Growth
-                </span>
-              </div>
             </motion.div>
 
             {/* Branding Text */}
