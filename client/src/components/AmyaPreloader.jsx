@@ -27,6 +27,7 @@ export default function AmyaPreloader({ onComplete }) {
             backgroundImage: `radial-gradient(#e6decb 1px, transparent 1px), radial-gradient(#e6decb 1px, #f6f1e7 1px)`,
             backgroundSize: '36px 36px',
             backgroundPosition: '0 0, 18px 18px',
+            perspective: 1000,
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.6 } }}
@@ -36,30 +37,41 @@ export default function AmyaPreloader({ onComplete }) {
           <div className="w-full" />
 
           {/* Center Brand Identity Container */}
-          <div className="flex flex-col items-center justify-center my-auto text-center gap-6 max-w-xl">
-            {/* Center Logo Container with breathing scale */}
+          <div className="flex flex-col items-center justify-center my-auto text-center gap-6 max-w-2xl px-4">
+            {/* Center Logo Container with 3D Flip Entrance & Heartbeat Pulse */}
             <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: [0.98, 1.03, 0.98], opacity: 1 }}
-              transition={{
-                scale: { repeat: Infinity, duration: 2.5, ease: 'easeInOut' },
-                opacity: { duration: 0.8, ease: 'easeOut' },
+              initial={{ rotateY: 90, opacity: 0, scale: 0.8 }}
+              animate={{
+                rotateY: 0,
+                opacity: 1,
+                scale: [1, 1.05, 1],
               }}
+              transition={{
+                rotateY: { duration: 1.1, ease: [0.16, 1, 0.3, 1] },
+                opacity: { duration: 0.8, ease: 'easeOut' },
+                scale: {
+                  delay: 1.1,
+                  repeat: Infinity,
+                  duration: 2.4,
+                  ease: 'easeInOut',
+                },
+              }}
+              style={{ transformStyle: 'preserve-3d' }}
               className="flex flex-col items-center justify-center relative"
             >
-              {/* Amya Growth Logo PNG Image from Assets (Increased Size) */}
+              {/* Amya Growth Logo PNG Image */}
               <img
                 src={amyaLogoImg}
                 alt="Amya Growth Logo"
-                className="h-44 sm:h-64 md:h-72 w-auto object-contain drop-shadow-[0_16px_32px_rgba(39,83,84,0.12)]"
+                className="h-48 sm:h-64 md:h-76 w-auto object-contain drop-shadow-[0_16px_36px_rgba(39,83,84,0.16)]"
               />
             </motion.div>
 
             {/* Branding Text directly below logo */}
             <motion.p
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
               className="text-sm sm:text-base font-medium tracking-wide mt-1"
               style={{ color: '#275354', fontFamily: "'Outfit', 'Inter', sans-serif" }}
             >
@@ -70,7 +82,7 @@ export default function AmyaPreloader({ onComplete }) {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
               className="mt-2 flex items-center justify-center"
             >
               <div className="relative w-9 h-9 flex items-center justify-center animate-spin" style={{ animationDuration: '2.4s' }}>
