@@ -3,10 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AmyaPreloader({ onComplete }) {
   const [isFinished, setIsFinished] = useState(false);
-  const [imgError, setImgError] = useState(false);
 
   useEffect(() => {
-    // Hold for minimum 5 seconds
+    // Show preloader for 5 seconds then transition out
     const timer = setTimeout(() => {
       setIsFinished(true);
       if (onComplete) {
@@ -21,8 +20,13 @@ export default function AmyaPreloader({ onComplete }) {
     <AnimatePresence>
       {!isFinished && (
         <motion.div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-between p-8 selection:bg-[#2b5353] selection:text-white"
-          style={{ backgroundColor: '#fdfbf7' }}
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-between p-8 overflow-hidden select-none"
+          style={{
+            backgroundColor: '#f7f4ed',
+            backgroundImage: `radial-gradient(#e5dec9 1px, transparent 1px), radial-gradient(#e5dec9 1px, #f7f4ed 1px)`,
+            backgroundSize: '40px 40px',
+            backgroundPosition: '0 0, 20px 20px',
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.6 } }}
           exit={{ opacity: 0, y: '-100%', transition: { duration: 0.9, ease: [0.83, 0, 0.17, 1] } }}
@@ -30,56 +34,89 @@ export default function AmyaPreloader({ onComplete }) {
           {/* Top Spacing */}
           <div className="w-full" />
 
-          {/* Center Branding Content */}
-          <div className="flex flex-col items-center justify-center my-auto text-center gap-6">
-            {/* Center Logo with Breathing / Pulse Animation */}
+          {/* Center Brand Identity Container */}
+          <div className="flex flex-col items-center justify-center my-auto text-center gap-7 max-w-xl">
+            {/* Center Logo Block */}
             <motion.div
-              animate={{ scale: [1, 1.06, 1], opacity: [0.9, 1, 0.9] }}
-              transition={{ repeat: Infinity, duration: 2.2, ease: 'easeInOut' }}
-              className="flex items-center justify-center min-h-[80px]"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="flex flex-col items-center justify-center gap-1"
             >
-              {!imgError ? (
+              {/* Image logo or Stylized Split-Gradient Typography */}
+              <div className="relative flex flex-col items-center">
                 <img
                   src="/AMYALOGO.png"
-                  alt="Amya Growth Logo"
-                  onError={() => setImgError(true)}
-                  className="h-16 md:h-24 w-auto object-contain drop-shadow-sm"
+                  alt="Amya Growth"
+                  className="h-16 md:h-24 w-auto object-contain mb-1"
+                  onError={(e) => {
+                    // Hide image element if file not found so fallback stylized text renders seamlessly
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
-              ) : (
-                /* Fallback SVG logo in case AMYALOGO.png file is added later */
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-[#2b5353] flex items-center justify-center text-white font-extrabold text-2xl shadow-lg">
-                    A
-                  </div>
-                  <span className="text-3xl font-extrabold tracking-tight" style={{ color: '#2b5353', fontFamily: 'var(--font-sans)' }}>
-                    Amya <span style={{ color: '#589796' }}>Growth</span>
-                  </span>
-                </div>
-              )}
+
+                {/* Stylized 'Amya' with Deep Forest Green & Teal-Cyan Split */}
+                <h1
+                  className="text-5xl sm:text-7xl font-extrabold tracking-tight leading-none"
+                  style={{
+                    fontFamily: "'Playfair Display', 'Cinzel', serif",
+                    background: 'linear-gradient(135deg, #1a3d37 0%, #1a3d37 48%, #489b9b 52%, #489b9b 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  Amya
+                </h1>
+
+                {/* 'Growth' in matching thin dark forest green font */}
+                <span
+                  className="text-sm sm:text-base font-light tracking-[0.35em] uppercase mt-1 pl-1"
+                  style={{ color: '#1a3d37', fontFamily: "'Inter', sans-serif" }}
+                >
+                  Growth
+                </span>
+              </div>
             </motion.div>
 
             {/* Branding Text */}
-            <p
-              className="text-base sm:text-lg font-medium tracking-wide"
-              style={{ color: '#2b5353', fontFamily: 'system-ui, -apple-system, sans-serif' }}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-xs sm:text-sm font-medium tracking-wider"
+              style={{ color: '#1a3d37', fontFamily: "'Inter', sans-serif" }}
             >
-              Website Crafted with <span className="text-red-500 animate-pulse">❤️</span> by Amya Growth
-            </p>
+              Website Crafted with <span className="text-red-500 inline-block animate-pulse">❤️</span> by Amya Growth
+            </motion.p>
 
-            {/* Elegant Teal/Cyan Loading Spinner */}
-            <div className="mt-2 flex items-center justify-center">
-              <div
-                className="w-7 h-7 rounded-full animate-spin border-2 border-t-transparent"
-                style={{ borderColor: '#589796', borderTopColor: 'transparent' }}
-              />
-            </div>
+            {/* Circle of Teal-Cyan Dots Loader */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="mt-2 flex items-center justify-center"
+            >
+              <div className="relative w-9 h-9 flex items-center justify-center animate-spin" style={{ animationDuration: '2.5s' }}>
+                {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-1.5 h-1.5 rounded-full"
+                    style={{
+                      backgroundColor: '#489b9b',
+                      opacity: 0.2 + (i / 8) * 0.8,
+                      transform: `rotate(${deg}deg) translate(14px)`,
+                    }}
+                  />
+                ))}
+              </div>
+            </motion.div>
           </div>
 
-          {/* Bottom Footer Note */}
-          <div className="w-full text-center pb-4">
+          {/* Experience Initializing Text at Bottom */}
+          <div className="w-full text-center pb-2">
             <span
-              className="text-xs uppercase tracking-widest font-semibold opacity-70"
-              style={{ color: '#2b5353' }}
+              className="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-medium"
+              style={{ color: '#a3adab', fontFamily: "'Inter', sans-serif" }}
             >
               EXPERIENCE INITIALIZING...
             </span>
