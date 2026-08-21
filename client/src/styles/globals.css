@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-black: #000000;
+  --c-white: #ffffff;
+  --c-red: #7a0c07;
+  --c-gray: #f1f1f1;
+  --c-haki: #7a7a7a;
+  --c-black-10: rgba(0, 0, 0, 0.1);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Playfair Display', 'Times New Roman', Georgia, serif;
+  --font-brand: 'Inter', sans-serif;
+
+  --default-ease: cubic-bezier(0.24, 1, 0.36, 1);
+  --out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--c-black);
+  color: var(--c-white);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-red);
+  border-radius: 3px;
+}
+
+/* Base typography classes matching target website */
+.d1 {
+  font-family: var(--font-sans);
+  font-size: clamp(3.5rem, 8vw, 8.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.h1 {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.h1-t {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.l1 {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.l1-t {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.l2 {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Serif italic styling inside headers */
+i {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: inherit;
+}
+
+/* Button & Pill Animations */
+.btn-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  border: 1px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s var(--out-expo);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.btn-pill .btn-bg {
+  position: absolute;
+  inset: 0;
+  background-color: currentColor;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s var(--out-expo);
+  z-index: 0;
+}
+
+.btn-pill:hover .btn-bg {
+  transform: scaleY(1);
+}
+
+.btn-circle {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-circle:hover {
+  background-color: var(--c-white);
+  color: var(--c-black);
+}
+
+/* Marquee keyframe animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Text reveal wrapper */
+.overflow-hidden-line {
+  overflow: hidden;
+  display: block;
+}
+
+.slide-up-text {
+  display: block;
+  transform: translateY(100%);
+  transition: transform 0.8s var(--out-expo);
+}
+
+.slide-up-text.in-view {
+  transform: translateY(0%);
+}
