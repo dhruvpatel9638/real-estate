@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import amyaLogoImg from '../Amya LOGO png.png';
+import amyaLogoImg from '../Assets/AMYALOGO.png';
 
 export default function AmyaPreloader({ onComplete }) {
   const [isFinished, setIsFinished] = useState(false);
@@ -36,7 +36,7 @@ export default function AmyaPreloader({ onComplete }) {
           <div className="w-full" />
 
           {/* Center Brand Identity Container */}
-          <div className="flex flex-col items-center justify-center my-auto text-center gap-8 max-w-xl">
+          <div className="flex flex-col items-center justify-center my-auto text-center gap-10 max-w-xl">
             {/* Center Logo Container with breathing scale */}
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
@@ -47,31 +47,20 @@ export default function AmyaPreloader({ onComplete }) {
               }}
               className="flex flex-col items-center justify-center relative"
             >
-              {/* Amya Growth Logo PNG Image */}
+              {/* Amya Growth Logo PNG Image from Assets */}
               <img
                 src={amyaLogoImg}
                 alt="Amya Growth Logo"
-                className="h-28 sm:h-40 w-auto object-contain drop-shadow-[0_10px_20px_rgba(39,83,84,0.12)]"
+                className="h-32 sm:h-44 w-auto object-contain drop-shadow-[0_12px_24px_rgba(39,83,84,0.12)]"
               />
             </motion.div>
-
-            {/* Branding Text */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-xs sm:text-sm font-medium tracking-wider"
-              style={{ color: '#275354', fontFamily: "'Inter', sans-serif" }}
-            >
-              Website Crafted with <span className="text-red-500 inline-block animate-pulse">❤️</span> by Amya Growth
-            </motion.p>
 
             {/* Circle of Teal-Cyan Dots Loader */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="mt-1 flex items-center justify-center"
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="mt-2 flex items-center justify-center"
             >
               <div className="relative w-9 h-9 flex items-center justify-center animate-spin" style={{ animationDuration: '2.4s' }}>
                 {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => (
