@@ -18,9 +18,9 @@ export default function About() {
   ];
 
   const honors = [
-    { title: '10 LAKH+', desc: 'Trusted clients & happy families served across Gujarat & Maharashtra' },
+    { title: '10 LAKH+', desc: 'Trusted clients & happy families served across Gujarat' },
     { title: '₹2,000 Cr+', desc: 'Cumulative high-yield property transactions in premier Indian corridors' },
-    { title: 'TOP-1', desc: 'Leading luxury real estate network in Western India (Gujarat & Maharashtra)' }
+    { title: 'TOP-1', desc: 'Leading luxury real estate network in Gujarat' }
   ];
 
   useEffect(() => {
@@ -86,7 +86,7 @@ export default function About() {
 
   const headingLines = [
     <>India's premier real estate network serving over</>,
-    <><i>10 Lakh+ clients</i> across <i>Gujarat & Maharashtra</i>.</>,
+    <><i>10 Lakh+ clients</i> across <i>Gujarat</i>.</>,
     <>Connecting buyers and investors with premier luxury estates,</>,
     <>commercial hubs, and high-yield <i>township investments</i>.</>
   ];

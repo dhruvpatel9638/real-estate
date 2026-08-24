@@ -14,28 +14,18 @@ export default function LocationsSection() {
 
   const locations = [
     {
-      city: 'Gujarat (Ahmedabad)',
-      title: 'Gujarat Network HQ at Vaishnodevi Circle',
+      city: 'Ahmedabad',
+      title: 'Flagship Office at Vaishnodevi Circle',
       building: 'Prime Estate Towers, Vaishnodevi Circle, Ahmedabad',
-      desc: 'Our flagship Gujarat headquarters at Vaishnodevi Circle, Ahmedabad serves over 6 Lakh+ clients across Gujarat including GIFT City, Surat, and Vadodara. A state-of-the-art facility for high-value residential & commercial deals.',
+      desc: 'Our flagship corporate office at Vaishnodevi Circle, Ahmedabad serves over 10 Lakh+ clients across Gujarat and Western India. A state-of-the-art facility for high-value residential, commercial, and penthouse deals.',
       phone: '+91 98765 43210',
-      email: 'gujarat@primeestate-network.com',
+      email: 'info@primeestate-network.com',
       mapUrl: 'https://maps.google.com/?q=Vaishnodevi+Circle+Ahmedabad',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80'
-    },
-    {
-      city: 'Maharashtra (Mumbai)',
-      title: 'Maharashtra Network Hub at BKC Mumbai',
-      building: 'Prime Financial Tower, Bandra-Kurla Complex (BKC)',
-      desc: 'Our premier Maharashtra hub at BKC Mumbai manages over 4 Lakh+ clients across Mumbai MMR, Pune, and Nagpur. Offering white-glove advisory for luxury penthouses, IT parks, and commercial towers.',
-      phone: '+91 98200 12345',
-      email: 'maharashtra@primeestate-network.com',
-      mapUrl: 'https://maps.google.com/?q=Bandra+Kurla+Complex+Mumbai',
-      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80'
     }
   ];
 
-  const currentLocation = locations[activeLocation];
+  const currentLocation = locations[0];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -70,43 +60,14 @@ export default function LocationsSection() {
     return () => ctx.revert();
   }, []);
 
-  // Tab switch animation
-  useEffect(() => {
-    if (!contentRef.current) return;
-    gsap.fromTo(contentRef.current.querySelectorAll('.loc-anim'),
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out', stagger: 0.06 }
-    );
-    if (imageRef.current) {
-      const img = imageRef.current.querySelector('img');
-      if (img) {
-        gsap.fromTo(img,
-          { opacity: 0, scale: 1.08 },
-          { opacity: 1, scale: 1, duration: 0.6, ease: 'expo.out' }
-        );
-      }
-    }
-  }, [activeLocation]);
-
   return (
     <section ref={sectionRef} className="w-full bg-black text-white py-28 px-6 sm:px-16 border-t border-neutral-900 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
 
-        {/* Location Tabs */}
-        <div ref={tabsRef} className="flex items-center gap-6 border-b border-neutral-800 pb-4" style={{ opacity: 0 }}>
-          {locations.map((loc, idx) => (
-            <button
-              key={loc.city}
-              onClick={() => setActiveLocation(idx)}
-              className={`l1 text-lg pb-2 transition-all duration-300 border-b-2 ${
-                activeLocation === idx
-                  ? 'border-white text-white font-bold'
-                  : 'border-transparent text-neutral-500 hover:text-white'
-              }`}
-            >
-              {loc.city}
-            </button>
-          ))}
+        {/* Location Header */}
+        <div ref={tabsRef} className="flex items-center justify-between border-b border-neutral-800 pb-4" style={{ opacity: 0 }}>
+          <span className="l1-t font-serif text-lg text-white">Flagship Office</span>
+          <span className="l1 text-xs text-neutral-400">AHMEDABAD, GUJARAT</span>
         </div>
 
         {/* Content Grid */}

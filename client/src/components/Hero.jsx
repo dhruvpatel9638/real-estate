@@ -133,9 +133,9 @@ export default function Hero() {
 
         {/* Bottom Metadata Bar */}
         <div ref={bottomBarRef} className="w-full flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/10 z-20 text-neutral-400 l2">
-          <div>GUJARAT & MAHARASHTRA NETWORK</div>
+          <div>VAISHNODEVI CIRCLE, AHMEDABAD</div>
           <div className="mt-2 sm:mt-0 font-serif italic text-white text-base">
-            Serving 10 Lakh+ Satisfied Clients
+            Serving 10 Lakh+ Satisfied Clients Across Gujarat
           </div>
           <div className="hidden sm:block">ESTABLISHED 2010</div>
         </div>
@@ -153,12 +153,12 @@ export default function Hero() {
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Vaishnodevi Circle Villa" className="w-full h-full object-cover" />
             </div>
 
-            {/* Image 2: Penthouse Mumbai */}
+            {/* Image 2: Penthouse Ahmedabad */}
             <div ref={img2Ref} className="absolute w-full max-w-4xl aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80" alt="BKC Sky Penthouse" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80" alt="Sky Penthouse" className="w-full h-full object-cover" />
             </div>
 
-            {/* Image 3: Commercial Hub Pune */}
+            {/* Image 3: Commercial Hub Gujarat */}
             <div ref={img3Ref} className="absolute w-full max-w-4xl aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
               <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=80" alt="Commercial Estate" className="w-full h-full object-cover" />
             </div>
@@ -166,13 +166,13 @@ export default function Hero() {
 
           {/* Reveal Black Text (Appears AFTER image sequence finishes on scroll) */}
           <div ref={revealTextRef} className="relative z-10 text-center px-6 max-w-4xl" style={{ opacity: 0, color: '#000000', transformOrigin: 'center center' }}>
-            <span className="l1 text-xs uppercase tracking-widest block mb-4" style={{ color: '#000000' }}>10 Lakh+ Clients Across Gujarat & Maharashtra</span>
+            <span className="l1 text-xs uppercase tracking-widest block mb-4" style={{ color: '#000000' }}>10 Lakh+ Clients Across Gujarat</span>
             <h2 className="d1 uppercase tracking-tighter text-4xl sm:text-7xl leading-none" style={{ color: '#000000' }}>
               Redefining <br />
-              <span className="font-serif italic font-normal lowercase" style={{ color: '#000000' }}>indian estate</span> networks
+              <span className="font-serif italic font-normal lowercase" style={{ color: '#000000' }}>luxury</span> living
             </h2>
             <p className="l1 text-xs max-w-md mx-auto mt-6 leading-relaxed" style={{ color: '#000000' }}>
-              Empowering over 10 Lakh+ families and investors across Gujarat & Maharashtra with high-value real estate assets.
+              Empowering over 10 Lakh+ families and investors across Gujarat with high-value real estate assets.
             </p>
           </div>
         </div>

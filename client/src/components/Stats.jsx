@@ -13,7 +13,7 @@ export default function Stats() {
   const [counts, setCounts] = useState({ n1: 0, n2: 0, n3: 0 });
 
   const stats = [
-    { num: 10, suffix: ' Lakh+', text: 'Satisfied clients and families across Gujarat & Maharashtra', color: '#7a0c07' },
+    { num: 10, suffix: ' Lakh+', text: 'Satisfied clients and families served across Gujarat', color: '#7a0c07' },
     { num: 2, suffix: 'K Cr+', text: 'Cumulative property value transacted in premier real estate corridors', color: '#ffffff' },
     { num: 15, suffix: ' Yrs+', text: 'Legacy of excellence in Indian residential & commercial developments', color: '#7a0c07' },
   ];
@@ -114,7 +114,7 @@ export default function Stats() {
         {/* Center Philosophy Statement */}
         <div ref={quoteRef} className="max-w-3xl mx-auto text-center pt-16 border-t border-neutral-800" style={{ opacity: 0 }}>
           <p className="text-base text-neutral-300 font-serif leading-relaxed italic">
-            "Prime Estate Network was built on a singular vision: to empower families and investors across Gujarat and Maharashtra with transparent, high-yield real estate opportunities. Over 10 Lakh+ clients trust us for our unyielding commitment to luxury and integrity."
+            "Prime Estate Network was built on a singular vision: to empower families and investors across Gujarat with transparent, high-yield real estate opportunities. Over 10 Lakh+ clients trust us for our unyielding commitment to luxury and integrity."
           </p>
         </div>
 

@@ -17,9 +17,9 @@ export default function ServicesSlider() {
 
   const defaultServices = [
     {
-      titleHtml: 'Gujarat & Maharashtra <i>Estate</i> <i>Advisory</i>',
-      titlePlain: 'Gujarat & Maharashtra Estate Advisory',
-      description: 'Exclusive real estate advisory covering premier residential, penthouses, and luxury villas across Ahmedabad, Mumbai, Pune & GIFT City.',
+      titleHtml: 'Gujarat Premier <i>Estate</i> <i>Advisory</i>',
+      titlePlain: 'Gujarat Premier Estate Advisory',
+      description: 'Exclusive real estate advisory covering premier residential, penthouses, and luxury villas across Ahmedabad, GIFT City, Surat & Vadodara.',
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80'
     },
     {

@@ -22,22 +22,22 @@ export default function CasesGrid() {
     {
       caseId: '2',
       counter: '02',
-      title: 'BKC Luxury Sky Penthouse — Mumbai',
-      developer: 'Prime Maharashtra Network',
+      title: 'SG Highway Sky Penthouse — Ahmedabad',
+      developer: 'Prime Signature Living',
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
     },
     {
       caseId: '3',
       counter: '03',
       title: 'GIFT City Financial Tower — Gandhinagar',
-      developer: 'Prime Gujarat Commercial',
+      developer: 'Prime Commercial Gujarat',
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'
     },
     {
       caseId: '4',
       counter: '04',
-      title: 'Koregaon Park Grand Estate — Pune',
-      developer: 'Prime Maharashtra Living',
+      title: 'Vesu Grand Estate — Surat',
+      developer: 'Prime Heritage Gujarat',
       image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80'
     }
   ];
