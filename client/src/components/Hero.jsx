@@ -124,18 +124,18 @@ export default function Hero() {
         {/* Hero Title */}
         <div ref={titleRef} className="mt-28 sm:mt-36 max-w-7xl mx-auto text-center z-20">
           <h1 className="d1 text-white leading-none tracking-tight uppercase">
-            Prime Estate Network <br />
-            <span className="font-serif italic font-normal text-neutral-300" style={{ fontSize: '0.75em', textTransform: 'lowercase' }}>serving</span>{' '}
-            10 lakh+ clients <br />
-            in gujarat & maharashtra
+            Prime Real Estate <br />
+            <span className="font-serif italic font-normal text-neutral-300" style={{ fontSize: '0.75em', textTransform: 'lowercase' }}>where</span>{' '}
+            prestige <br />
+            finds its address
           </h1>
         </div>
 
         {/* Bottom Metadata Bar */}
         <div ref={bottomBarRef} className="w-full flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/10 z-20 text-neutral-400 l2">
-          <div>GUJARAT & MAHARASHTRA PREMIER NETWORK</div>
+          <div>GUJARAT & MAHARASHTRA NETWORK</div>
           <div className="mt-2 sm:mt-0 font-serif italic text-white text-base">
-            10 Lakh+ Satisfied Clients & Families
+            Serving 10 Lakh+ Satisfied Clients
           </div>
           <div className="hidden sm:block">ESTABLISHED 2010</div>
         </div>
