@@ -12,15 +12,15 @@ export default function About() {
   const honorsRef = useRef([]);
 
   const images = [
-    'https://cdn.fame-estate.com/team1_6263c4b459.jpg',
-    'https://cdn.fame-estate.com/team3_fb12944350.png',
-    'https://cdn.fame-estate.com/team2_82704b4f06.png'
+    'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80'
   ];
 
   const honors = [
-    { title: 'MBA', desc: 'Brokers with economic and financial education, MBA, taking weekly trainings' },
-    { title: 'TOP-3', desc: 'We are among the top three leaders among Damac, Luxe Development and NAKHEEL' },
-    { title: 'Forbes', desc: 'Direct contacts with Forbes billionaires and top managers' }
+    { title: 'TOP-1', desc: 'Leading luxury real estate agency in Vaishnodevi Circle, Ahmedabad' },
+    { title: 'MBA', desc: 'Certified luxury advisors with deep financial & property market expertise' },
+    { title: 'Forbes', desc: 'Direct network with Forbes billionaires & high-net-worth investors' }
   ];
 
   useEffect(() => {

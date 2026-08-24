@@ -27,9 +27,11 @@ export default function Navbar({ onNavigate }) {
 
   return (
     <header className="fixed top-0 left-0 w-full z-40 px-6 py-4 flex items-center justify-between pointer-events-none mix-blend-difference text-white">
-      {/* Left CTA */}
-      <div className="pointer-events-auto flex items-center gap-3">
-        <span className="l1 hidden sm:inline-block opacity-75">looking for</span>
+      {/* Left Brand & CTA */}
+      <div className="pointer-events-auto flex items-center gap-4">
+        <a href="#introduction" className="text-xl font-extrabold tracking-tighter text-white hover:opacity-90 transition-opacity">
+          PRIME <span className="font-serif italic font-normal text-purple-400">Estate</span>
+        </a>
         <button
           onClick={() => handleNavClick('contact')}
           className="btn-pill hover:bg-white hover:text-black transition-all flex items-center gap-2 group border-white/40"
@@ -42,7 +44,7 @@ export default function Navbar({ onNavigate }) {
       {/* Right Navigation */}
       <div className="pointer-events-auto relative flex items-center gap-6">
         <span className="l1 hidden sm:inline-block opacity-75">new emotions?</span>
-        
+
         {/* Navigation Dropdown Toggle */}
         <div className="relative">
           <button

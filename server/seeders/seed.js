@@ -6,37 +6,33 @@ import { Service } from '../models/Service.js';
 
 dotenv.config();
 
-const connStr = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/fame_estate';
+const connStr = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/prime_estate';
 
 const cases = [
-  { caseId: '1', counter: '001', title: 'Damac Hills Luxury Villa', developer: 'Damac Properties', image: 'https://cdn.fame-estate.com/team1_6263c4b459.jpg' },
-  { caseId: '2', counter: '002', title: 'Luxe Waterfront Residences', developer: 'Luxe Development', image: 'https://cdn.fame-estate.com/team3_fb12944350.png' },
-  { caseId: '3', counter: '003', title: 'Palm Jumeirah Bay Estates', developer: 'Nakheel', image: 'https://cdn.fame-estate.com/team2_82704b4f06.png' },
-  { caseId: '4', counter: '004', title: 'Six Senses Residences Dubai', developer: 'Six Senses', image: 'https://cdn.fame-estate.com/service_01a01267d4.png' },
-  { caseId: '5', counter: '005', title: 'Cavalli Tower Penthouses', developer: 'Damac Properties', image: 'https://cdn.fame-estate.com/service2_db4b58f8b4.png' },
-  { caseId: '6', counter: '006', title: 'The World Islands Private Retreat', developer: 'Luxe Development', image: 'https://cdn.fame-estate.com/service_3_5e30da923e.png' },
-  { caseId: '7', counter: '007', title: 'Jumeirah Islands Ocean Villa', developer: 'Nakheel', image: 'https://cdn.fame-estate.com/service3_fa7030456f.webp' },
-  { caseId: '8', counter: '008', title: 'Royal Atlantis Private Mansions', developer: 'Six Senses', image: 'https://cdn.fame-estate.com/service1_23ad1a8002.webp' }
+  { caseId: '1', counter: '001', title: 'Vaishnodevi Royal Villas', developer: 'Prime Developers', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '2', counter: '002', title: 'SG Highway Sky Penthouse', developer: 'Prime Living', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '3', counter: '003', title: 'SP Ring Road Grand Estate', developer: 'Prime Signature', image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '4', counter: '004', title: 'Vaishnodevi Luxury Heights', developer: 'Prime Group', image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1000&q=80' }
 ];
 
 const team = [
   {
-    name: 'Vladislav Blazhennov',
-    role: 'Founder & CEO, Fame',
-    bio: 'Digital marketing expert with 9 years of experience in creating effective advertising campaigns, turning them into a stream of quality leads.',
-    image: 'https://cdn.fame-estate.com/team1_6263c4b459.jpg'
+    name: 'Rajesh Patel',
+    role: 'Founder & Managing Director',
+    bio: 'Pioneering luxury real estate developments in Vaishnodevi Circle, Ahmedabad with over 18 years of experience.',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80'
   },
   {
-    name: 'Daria Blazhenova',
-    role: 'Sales Director',
-    bio: 'A true master of negotiations and a sales expert with 10 years of experience. Possesses an innate intuition for sales, strategic thinking, and top-tier deal execution.',
-    image: 'https://cdn.fame-estate.com/team3_fb12944350.png'
+    name: 'Ananya Sharma',
+    role: 'Head of Luxury Acquisitions',
+    bio: 'Specializing in ultra-luxury villas and penthouses across Vaishnodevi Circle and S.G. Highway for HNI clients.',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80'
   },
   {
-    name: 'Aleksandr Grigorev',
-    role: 'Project Director',
-    bio: 'Analytical mindset, expert in working with data and forecasts. Master of working with spreadsheets, projections, and long-term strategies.',
-    image: 'https://cdn.fame-estate.com/team2_82704b4f06.png'
+    name: 'Vikram Mehta',
+    role: 'Chief Investment Officer',
+    bio: 'Structuring high-yield commercial and residential portfolio investments in Ahmedabad prime growth corridors.',
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1000&q=80'
   }
 ];
 
@@ -44,20 +40,20 @@ const services = [
   {
     titleHtml: 'Market Insights & <i>Property</i> <i>Selection</i>',
     titlePlain: 'Market Insights & Property Selection',
-    description: 'Brokers with economic and financial education, MBA, taking weekly trainings to ensure top-tier yield optimization.',
-    image: 'https://cdn.fame-estate.com/service_01a01267d4.png'
+    description: 'Certified brokers with deep financial & property market expertise in Vaishnodevi Circle, Ahmedabad.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80'
   },
   {
-    titleHtml: 'Emirates ID & <i>Driver’s</i> <i>License</i> <i>Assistance</i>',
-    titlePlain: 'Emirates ID & Driver’s License Assistance',
-    description: 'Exclusive access to luxury real estate, premium assets, and high-end lifestyle services with seamless residency setup.',
-    image: 'https://cdn.fame-estate.com/service2_db4b58f8b4.png'
+    titleHtml: 'Legal Documentation & <i>Registry</i> <i>Assistance</i>',
+    titlePlain: 'Legal Documentation & Registry Assistance',
+    description: 'Seamless title verification, legal documentation, and VIP registration services for premium estates.',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80'
   },
   {
-    titleHtml: 'Private Shopping & <i>VIP</i> <i>Services</i>',
-    titlePlain: 'Private Shopping & VIP Services',
-    description: 'White-glove concierge management, luxury vehicle acquisition, and Forbes-level private shopping access.',
-    image: 'https://cdn.fame-estate.com/service_3_5e30da923e.png'
+    titleHtml: 'Portfolio Management & <i>VIP</i> <i>Consulting</i>',
+    titlePlain: 'Portfolio Management & VIP Consulting',
+    description: 'End-to-end luxury asset management, high-yield rental management, and private portfolio advisory.',
+    image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1000&q=80'
   }
 ];
 

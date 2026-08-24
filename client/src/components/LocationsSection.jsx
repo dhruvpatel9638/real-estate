@@ -14,24 +14,14 @@ export default function LocationsSection() {
 
   const locations = [
     {
-      city: 'Dubai',
-      title: 'agency office in Opus Tower',
-      building: 'Opus Tower, Business Bay',
-      desc: 'The office in Opus Tower symbolizes not only our success, but also our high status in the market. It is a place where world-class deals are created and every element surrounds our clients with luxury and comfort.',
-      phone: '+971 48358047',
-      email: 'dubai@fame-estate.com',
-      mapUrl: 'https://maps.google.com/?q=Opus+Tower+Dubai',
-      image: 'https://cdn.fame-estate.com/service1_23ad1a8002.webp'
-    },
-    {
-      city: 'Bangkok',
-      title: 'agency office in SINGHA COMPLEX',
-      building: 'Singha Complex, Asok-Phetchaburi',
-      desc: "The office in SINGHA COMPLEX symbolizes not only our success but also our high status in the market. It's a place where world-class deals are made, and every element surrounds our clients with luxury and comfort.",
-      phone: '+66 (996) 788-400',
-      email: 'bangkok@fame-estate.com',
-      mapUrl: 'https://maps.google.com/?q=Singha+Complex+Bangkok',
-      image: 'https://cdn.fame-estate.com/medium_4_3c487dd279.png'
+      city: 'Ahmedabad',
+      title: 'Flagship Agency Office at Vaishnodevi Circle',
+      building: 'Prime Estate Towers, Vaishnodevi Circle',
+      desc: 'Our flagship headquarters at Vaishnodevi Circle symbolizes our dedication to luxury real estate in Ahmedabad. It is a state-of-the-art office where premier property deals are closed and every client experiences personalized, VIP service.',
+      phone: '+91 98765 43210',
+      email: 'info@primeestate-ahmedabad.com',
+      mapUrl: 'https://maps.google.com/?q=Vaishnodevi+Circle+Ahmedabad',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80'
     }
   ];
 

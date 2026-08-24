@@ -11,10 +11,44 @@ export default function CasesGrid() {
   const cardsRef = useRef([]);
   const [cases, setCases] = useState([]);
 
+  const defaultCases = [
+    {
+      caseId: '1',
+      counter: '01',
+      title: 'Vaishnodevi Circle Royal Villa',
+      developer: 'Prime Developers',
+      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      caseId: '2',
+      counter: '02',
+      title: 'SG Highway Sky Penthouse',
+      developer: 'Prime Living',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      caseId: '3',
+      counter: '03',
+      title: 'SP Ring Road Grand Estate',
+      developer: 'Prime Signature',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      caseId: '4',
+      counter: '04',
+      title: 'Vaishnodevi Luxury Heights',
+      developer: 'Prime Group',
+      image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80'
+    }
+  ];
+
   useEffect(() => {
     fetchCases()
-      .then((data) => setCases(data))
-      .catch((err) => console.error('Failed to load cases:', err));
+      .then((data) => setCases(data && data.length ? data : defaultCases))
+      .catch((err) => {
+        console.error('Failed to load cases:', err);
+        setCases(defaultCases);
+      });
   }, []);
 
   useEffect(() => {

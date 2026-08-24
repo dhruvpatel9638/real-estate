@@ -14,10 +14,34 @@ export default function TeamSlider() {
   const [team, setTeam] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
 
+  const defaultTeam = [
+    {
+      name: "Rajesh Patel",
+      role: "Managing Director & Founder",
+      bio: "Pioneering luxury real estate developments in Vaishnodevi Circle, Ahmedabad. Over 18 years of expertise in high-end residential estates.",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      name: "Ananya Sharma",
+      role: "Head of Luxury Acquisitions",
+      bio: "Specializing in ultra-luxury villas and penthouses across Vaishnodevi Circle and S.G. Highway, advising HNI clients globally.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      name: "Vikram Mehta",
+      role: "Chief Investment Officer",
+      bio: "Structuring high-yield commercial and residential portfolio investments in Ahmedabad's prime growth corridors.",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1000&q=80"
+    }
+  ];
+
   useEffect(() => {
     fetchTeam()
-      .then((data) => setTeam(data))
-      .catch((err) => console.error('Failed to load team:', err));
+      .then((data) => setTeam(data && data.length ? data : defaultTeam))
+      .catch((err) => {
+        console.error('Failed to load team:', err);
+        setTeam(defaultTeam);
+      });
   }, []);
 
   useEffect(() => {
