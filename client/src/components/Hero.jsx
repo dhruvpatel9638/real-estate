@@ -143,7 +143,7 @@ export default function Hero() {
         {/* Red Curtain Screen Container */}
         <div
           ref={redScreenRef}
-          className="absolute inset-0 bg-[#32054d] z-30 pointer-events-none flex items-center justify-center shadow-2xl overflow-hidden"
+          className="absolute inset-0 bg-[#7a0c07] z-30 pointer-events-none flex items-center justify-center shadow-2xl overflow-hidden"
           style={{ clipPath: 'polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)' }}
         >
           {/* Scroll Image Sequence Frames */}
@@ -177,8 +177,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Purple gradient glow at bottom */}
-        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#32054d]/30 to-transparent pointer-events-none z-10"></div>
+        {/* Red gradient glow at bottom */}
+        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#7a0c07]/30 to-transparent pointer-events-none z-10"></div>
       </section>
     </div>
   );

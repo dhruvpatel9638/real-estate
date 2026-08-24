@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Left Info */}
         <div className="flex flex-col gap-4">
           <div className="text-3xl font-extrabold tracking-tighter text-white">
-            PRIME <span className="font-serif italic font-normal text-purple-400">Estate</span>
+            PRIME <span className="font-serif italic font-normal text-[#7a0c07]">Estate</span>
           </div>
           <p className="l1-t text-xs text-neutral-400 max-w-sm leading-relaxed">
             Exclusive real estate agency specializing in luxury residential & commercial properties in Vaishnodevi Circle, Ahmedabad.

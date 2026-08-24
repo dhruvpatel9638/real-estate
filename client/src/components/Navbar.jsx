@@ -30,7 +30,7 @@ export default function Navbar({ onNavigate }) {
       {/* Left Brand & CTA */}
       <div className="pointer-events-auto flex items-center gap-4">
         <a href="#introduction" className="text-xl font-extrabold tracking-tighter text-white hover:opacity-90 transition-opacity">
-          PRIME <span className="font-serif italic font-normal text-purple-400">Estate</span>
+          PRIME <span className="font-serif italic font-normal text-[#7a0c07]">Estate</span>
         </a>
         <button
           onClick={() => handleNavClick('contact')}
