@@ -166,13 +166,13 @@ export default function Hero() {
 
           {/* Reveal Black Text (Appears AFTER image sequence finishes on scroll) */}
           <div ref={revealTextRef} className="relative z-10 text-center px-6 max-w-4xl" style={{ opacity: 0, color: '#000000', transformOrigin: 'center center' }}>
-            <span className="l1 text-xs uppercase tracking-widest block mb-4" style={{ color: '#000000' }}>10 Lakh+ Clients Across Gujarat</span>
+            <span className="l1 text-xs uppercase tracking-widest block mb-4" style={{ color: '#000000' }}>Gujarat Premier Real Estate Network</span>
             <h2 className="d1 uppercase tracking-tighter text-4xl sm:text-7xl leading-none" style={{ color: '#000000' }}>
               Redefining <br />
               <span className="font-serif italic font-normal lowercase" style={{ color: '#000000' }}>luxury</span> living
             </h2>
             <p className="l1 text-xs max-w-md mx-auto mt-6 leading-relaxed" style={{ color: '#000000' }}>
-              Empowering over 10 Lakh+ families and investors across Gujarat with high-value real estate assets.
+              Empowering families and investors across Gujarat with premium high-yield real estate assets.
             </p>
           </div>
         </div>

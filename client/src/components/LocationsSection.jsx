@@ -17,7 +17,7 @@ export default function LocationsSection() {
       city: 'Ahmedabad',
       title: 'Flagship Office at Vaishnodevi Circle',
       building: 'Prime Estate Towers, Vaishnodevi Circle, Ahmedabad',
-      desc: 'Our flagship corporate office at Vaishnodevi Circle, Ahmedabad serves over 10 Lakh+ clients across Gujarat and Western India. A state-of-the-art facility for high-value residential, commercial, and penthouse deals.',
+      desc: 'Our flagship corporate office at Vaishnodevi Circle, Ahmedabad serves clients across Gujarat and Western India. A state-of-the-art facility for high-value residential, commercial, and penthouse deals.',
       phone: '+91 98765 43210',
       email: 'info@primeestate-network.com',
       mapUrl: 'https://maps.google.com/?q=Vaishnodevi+Circle+Ahmedabad',

@@ -43,7 +43,7 @@ export default function Preloader({ onComplete }) {
             <div className="text-4xl md:text-6xl font-extrabold tracking-tighter text-white">
               PRIME <span className="font-serif italic font-normal text-3xl md:text-5xl text-[#7a0c07]">Estate</span>
             </div>
-            <span className="l2 tracking-[0.25em] text-neutral-400 mt-2 block uppercase">GUJARAT & MAHARASHTRA NETWORK — 10 LAKH+ CLIENTS</span>
+            <span className="l2 tracking-[0.25em] text-neutral-400 mt-2 block uppercase">GUJARAT PREMIER REAL ESTATE NETWORK</span>
           </div>
 
           {/* Loading Progress */}

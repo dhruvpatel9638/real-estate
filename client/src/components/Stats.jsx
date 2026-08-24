@@ -114,7 +114,7 @@ export default function Stats() {
         {/* Center Philosophy Statement */}
         <div ref={quoteRef} className="max-w-3xl mx-auto text-center pt-16 border-t border-neutral-800" style={{ opacity: 0 }}>
           <p className="text-base text-neutral-300 font-serif leading-relaxed italic">
-            "Prime Estate Network was built on a singular vision: to empower families and investors across Gujarat with transparent, high-yield real estate opportunities. Over 10 Lakh+ clients trust us for our unyielding commitment to luxury and integrity."
+            "Prime Estate Network was built on a singular vision: to empower families and investors across Gujarat with transparent, high-yield real estate opportunities. Our clients trust us for our unyielding commitment to luxury and integrity."
           </p>
         </div>
 

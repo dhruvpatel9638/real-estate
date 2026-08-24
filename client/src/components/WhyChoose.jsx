@@ -11,7 +11,7 @@ export default function WhyChoose() {
   const cardsRef = useRef([]);
 
   const benefits = [
-    { title: '10 Lakh+ Client Trust', desc: 'Over 10 Lakh+ families and investors served across Gujarat.' },
+    { title: '10 Lakh+ Client Trust', desc: 'Trusted families and investors served across Gujarat with excellence.' },
     { title: 'RERA Approved Deals', desc: '100% legal title clearance and RERA-compliant property transactions.' },
     { title: 'Zero Buyer Commission', desc: 'Direct developer partnerships with transparent zero-commission advisory.' },
     { title: 'Exclusive Pre-Launch Access', desc: 'Invest in premier residential & commercial hubs before public market launch.' },
