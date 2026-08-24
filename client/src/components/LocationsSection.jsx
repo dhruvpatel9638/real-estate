@@ -14,14 +14,24 @@ export default function LocationsSection() {
 
   const locations = [
     {
-      city: 'Ahmedabad',
-      title: 'Flagship Agency Office at Vaishnodevi Circle',
-      building: 'Prime Estate Towers, Vaishnodevi Circle',
-      desc: 'Our flagship headquarters at Vaishnodevi Circle symbolizes our dedication to luxury real estate in Ahmedabad. It is a state-of-the-art office where premier property deals are closed and every client experiences personalized, VIP service.',
+      city: 'Gujarat (Ahmedabad)',
+      title: 'Gujarat Network HQ at Vaishnodevi Circle',
+      building: 'Prime Estate Towers, Vaishnodevi Circle, Ahmedabad',
+      desc: 'Our flagship Gujarat headquarters at Vaishnodevi Circle, Ahmedabad serves over 6 Lakh+ clients across Gujarat including GIFT City, Surat, and Vadodara. A state-of-the-art facility for high-value residential & commercial deals.',
       phone: '+91 98765 43210',
-      email: 'info@primeestate-ahmedabad.com',
+      email: 'gujarat@primeestate-network.com',
       mapUrl: 'https://maps.google.com/?q=Vaishnodevi+Circle+Ahmedabad',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80'
+    },
+    {
+      city: 'Maharashtra (Mumbai)',
+      title: 'Maharashtra Network Hub at BKC Mumbai',
+      building: 'Prime Financial Tower, Bandra-Kurla Complex (BKC)',
+      desc: 'Our premier Maharashtra hub at BKC Mumbai manages over 4 Lakh+ clients across Mumbai MMR, Pune, and Nagpur. Offering white-glove advisory for luxury penthouses, IT parks, and commercial towers.',
+      phone: '+91 98200 12345',
+      email: 'maharashtra@primeestate-network.com',
+      mapUrl: 'https://maps.google.com/?q=Bandra+Kurla+Complex+Mumbai',
+      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80'
     }
   ];
 

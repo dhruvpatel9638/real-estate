@@ -124,20 +124,20 @@ export default function Hero() {
         {/* Hero Title */}
         <div ref={titleRef} className="mt-28 sm:mt-36 max-w-7xl mx-auto text-center z-20">
           <h1 className="d1 text-white leading-none tracking-tight uppercase">
-            Prime Real Estate <br />
-            <span className="font-serif italic font-normal text-neutral-300" style={{ fontSize: '0.75em', textTransform: 'lowercase' }}>where</span>{' '}
-            prestige <br />
-            finds its address
+            Prime Estate Network <br />
+            <span className="font-serif italic font-normal text-neutral-300" style={{ fontSize: '0.75em', textTransform: 'lowercase' }}>serving</span>{' '}
+            10 lakh+ clients <br />
+            in gujarat & maharashtra
           </h1>
         </div>
 
         {/* Bottom Metadata Bar */}
         <div ref={bottomBarRef} className="w-full flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/10 z-20 text-neutral-400 l2">
-          <div>VAISHNODEVI CIRCLE, AHMEDABAD</div>
+          <div>GUJARAT & MAHARASHTRA PREMIER NETWORK</div>
           <div className="mt-2 sm:mt-0 font-serif italic text-white text-base">
-            Scroll to explore exclusive properties
+            10 Lakh+ Satisfied Clients & Families
           </div>
-          <div className="hidden sm:block">ESTABLISHED 2020</div>
+          <div className="hidden sm:block">ESTABLISHED 2010</div>
         </div>
 
         {/* Red Curtain Screen Container */}
@@ -148,31 +148,31 @@ export default function Hero() {
         >
           {/* Scroll Image Sequence Frames */}
           <div className="absolute inset-0 z-0 flex items-center justify-center p-4 sm:p-12">
-            {/* Image 1: Luxury Villa Ahmedabad */}
+            {/* Image 1: Luxury Villa Gujarat */}
             <div ref={img1Ref} className="absolute w-full max-w-4xl aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Vaishnodevi Circle Villa" className="w-full h-full object-cover" />
             </div>
 
-            {/* Image 2: Penthouse Ahmedabad */}
+            {/* Image 2: Penthouse Mumbai */}
             <div ref={img2Ref} className="absolute w-full max-w-4xl aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80" alt="Luxury Penthouse" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80" alt="BKC Sky Penthouse" className="w-full h-full object-cover" />
             </div>
 
-            {/* Image 3: Waterfront Estate */}
+            {/* Image 3: Commercial Hub Pune */}
             <div ref={img3Ref} className="absolute w-full max-w-4xl aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
-              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=80" alt="Exclusive Estate" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=80" alt="Commercial Estate" className="w-full h-full object-cover" />
             </div>
           </div>
 
           {/* Reveal Black Text (Appears AFTER image sequence finishes on scroll) */}
           <div ref={revealTextRef} className="relative z-10 text-center px-6 max-w-4xl" style={{ opacity: 0, color: '#000000', transformOrigin: 'center center' }}>
-            <span className="l1 text-xs uppercase tracking-widest block mb-4" style={{ color: '#000000' }}>Vaishnodevi Circle, Ahmedabad</span>
+            <span className="l1 text-xs uppercase tracking-widest block mb-4" style={{ color: '#000000' }}>10 Lakh+ Clients Across Gujarat & Maharashtra</span>
             <h2 className="d1 uppercase tracking-tighter text-4xl sm:text-7xl leading-none" style={{ color: '#000000' }}>
               Redefining <br />
-              <span className="font-serif italic font-normal lowercase" style={{ color: '#000000' }}>luxury</span> living
+              <span className="font-serif italic font-normal lowercase" style={{ color: '#000000' }}>indian estate</span> networks
             </h2>
             <p className="l1 text-xs max-w-md mx-auto mt-6 leading-relaxed" style={{ color: '#000000' }}>
-              We sell premium properties in Ahmedabad that evoke emotions and give a new sense of prestige.
+              Empowering over 10 Lakh+ families and investors across Gujarat & Maharashtra with high-value real estate assets.
             </p>
           </div>
         </div>

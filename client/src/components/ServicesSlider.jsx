@@ -15,10 +15,34 @@ export default function ServicesSlider() {
   const [services, setServices] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
 
+  const defaultServices = [
+    {
+      titleHtml: 'Gujarat & Maharashtra <i>Estate</i> <i>Advisory</i>',
+      titlePlain: 'Gujarat & Maharashtra Estate Advisory',
+      description: 'Exclusive real estate advisory covering premier residential, penthouses, and luxury villas across Ahmedabad, Mumbai, Pune & GIFT City.',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80'
+    },
+    {
+      titleHtml: 'Commercial Hubs & <i>IT Park</i> <i>Leasing</i>',
+      titlePlain: 'Commercial Hubs & IT Park Leasing',
+      description: 'High-yield commercial asset acquisition, corporate office leasing, and IT park investment structuring for top enterprises.',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80'
+    },
+    {
+      titleHtml: 'NRI Investment & <i>Wealth</i> <i>Portfolios</i>',
+      titlePlain: 'NRI Investment & Wealth Portfolios',
+      description: 'White-glove real estate wealth management for NRIs and High-Net-Worth Individuals investing in India’s fastest-growing corridors.',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80'
+    }
+  ];
+
   useEffect(() => {
     fetchServices()
-      .then((data) => setServices(data))
-      .catch((err) => console.error('Failed to load services:', err));
+      .then((data) => setServices(data && data.length ? data : defaultServices))
+      .catch((err) => {
+        console.error('Failed to load services:', err);
+        setServices(defaultServices);
+      });
   }, []);
 
   useEffect(() => {

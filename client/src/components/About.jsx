@@ -18,9 +18,9 @@ export default function About() {
   ];
 
   const honors = [
-    { title: 'TOP-1', desc: 'Leading luxury real estate agency in Vaishnodevi Circle, Ahmedabad' },
-    { title: 'MBA', desc: 'Certified luxury advisors with deep financial & property market expertise' },
-    { title: 'Forbes', desc: 'Direct network with Forbes billionaires & high-net-worth investors' }
+    { title: '10 LAKH+', desc: 'Trusted clients & happy families served across Gujarat & Maharashtra' },
+    { title: '₹2,000 Cr+', desc: 'Cumulative high-yield property transactions in premier Indian corridors' },
+    { title: 'TOP-1', desc: 'Leading luxury real estate network in Western India (Gujarat & Maharashtra)' }
   ];
 
   useEffect(() => {
@@ -85,10 +85,10 @@ export default function About() {
   }, []);
 
   const headingLines = [
-    <>Exclusive real estate agency specializing in</>,
-    <><i>luxury residential</i> and <i>commercial properties</i>.</>,
-    <>Seamlessly connecting buyers and sellers with</>,
-    <>premier investments tailored to <i>elegance</i>, comfort, and success.</>
+    <>India's premier real estate network serving over</>,
+    <><i>10 Lakh+ clients</i> across <i>Gujarat & Maharashtra</i>.</>,
+    <>Connecting buyers and investors with premier luxury estates,</>,
+    <>commercial hubs, and high-yield <i>township investments</i>.</>
   ];
 
   return (

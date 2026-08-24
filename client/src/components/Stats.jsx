@@ -13,12 +13,9 @@ export default function Stats() {
   const [counts, setCounts] = useState({ n1: 0, n2: 0, n3: 0 });
 
   const stats = [
-    { num: 35, suffix: '+', text: 'Professionals with 3 to 17 years of real estate experience', color: '#7a0c07' },
-    {
-      num: 160, suffix: 'M'
-      , text: 'Average monthly sales are AED 160 million', color: '#ffffff'
-    },
-    { num: 6, suffix: '', text: 'Speak 6 languages: Russian, English, Arabic, Chinese, Hindi, and French', color: '#7a0c07' },
+    { num: 10, suffix: ' Lakh+', text: 'Satisfied clients and families across Gujarat & Maharashtra', color: '#7a0c07' },
+    { num: 2, suffix: 'K Cr+', text: 'Cumulative property value transacted in premier real estate corridors', color: '#ffffff' },
+    { num: 15, suffix: ' Yrs+', text: 'Legacy of excellence in Indian residential & commercial developments', color: '#7a0c07' },
   ];
 
   useEffect(() => {
@@ -86,8 +83,8 @@ export default function Stats() {
       <div className="absolute inset-0 z-0 opacity-40">
         <img
           ref={bgRef}
-          src="https://cdn.fame-estate.com/service_01a01267d4.png"
-          alt="Fame estate abstract"
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
+          alt="Prime estate abstract"
           className="w-full h-[110%] object-cover object-center grayscale will-change-transform"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
@@ -104,7 +101,7 @@ export default function Stats() {
               className="flex flex-col gap-4 border-l-2 pl-8"
               style={{ borderColor: stat.color, opacity: 0 }}
             >
-              <span className="font-extrabold tracking-tighter" style={{ color: stat.color, fontSize: 'clamp(4rem, 10vw, 9rem)', lineHeight: 0.9, fontFamily: 'var(--font-sans)' }}>
+              <span className="font-extrabold tracking-tighter" style={{ color: stat.color, fontSize: 'clamp(3.5rem, 8vw, 7.5rem)', lineHeight: 0.9, fontFamily: 'var(--font-sans)' }}>
                 {counts[`n${i}`]}{stat.suffix}
               </span>
               <p className="l1 text-xs text-neutral-400 leading-relaxed max-w-xs">
@@ -117,7 +114,7 @@ export default function Stats() {
         {/* Center Philosophy Statement */}
         <div ref={quoteRef} className="max-w-3xl mx-auto text-center pt-16 border-t border-neutral-800" style={{ opacity: 0 }}>
           <p className="text-base text-neutral-300 font-serif leading-relaxed italic">
-            "Our agency was born four years ago on the synergy of two outstanding professionals. Vlad Blazhennov and Daria Blazhennova created a team that from day one adhered to a philosophy: an individual approach, no templates and maximum involvement in each project."
+            "Prime Estate Network was built on a singular vision: to empower families and investors across Gujarat and Maharashtra with transparent, high-yield real estate opportunities. Over 10 Lakh+ clients trust us for our unyielding commitment to luxury and integrity."
           </p>
         </div>
 

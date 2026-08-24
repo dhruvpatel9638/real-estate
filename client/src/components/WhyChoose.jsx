@@ -11,11 +11,11 @@ export default function WhyChoose() {
   const cardsRef = useRef([]);
 
   const benefits = [
-    { title: 'Zero commission', desc: 'Our services are completely free for buyers.' },
-    { title: 'Personalized client service', desc: 'We guide you through every step of the investment process.' },
-    { title: 'Residency assistance', desc: 'We ensure seamless residency acquisition for you and your family.' },
-    { title: 'Exclusive pre-market access', desc: 'Invest in premium properties before they hit the general market.' },
-    { title: 'Top-tier developers', desc: 'Partnered exclusively with reputable developers in the UAE & Thailand.' }
+    { title: '10 Lakh+ Client Trust', desc: 'Over 10 Lakh+ families and investors served across Gujarat & Maharashtra.' },
+    { title: 'RERA Approved Deals', desc: '100% legal title clearance and RERA-compliant property transactions.' },
+    { title: 'Zero Buyer Commission', desc: 'Direct developer partnerships with transparent zero-commission advisory.' },
+    { title: 'Exclusive Pre-Launch Access', desc: 'Invest in premier residential & commercial hubs before public market launch.' },
+    { title: 'NRI Portfolio Advisory', desc: 'Complete property management, tenant leasing, and wealth advisory for NRIs.' }
   ];
 
   useEffect(() => {
@@ -50,11 +50,11 @@ export default function WhyChoose() {
       <div className="max-w-7xl mx-auto flex flex-col gap-16">
         <div className="text-center max-w-4xl mx-auto flex flex-col gap-4">
           <span ref={headerRef} className="l1 text-xs text-neutral-500 uppercase tracking-widest" style={{ opacity: 0 }}>
-            What Makes FAME the Right Choice for You?
+            Why Prime Estate Network is Western India's #1 Choice
           </span>
           <div className="overflow-hidden py-2 -my-2">
             <h2 ref={titleRef} className="d1 text-4xl sm:text-7xl leading-tight" style={{ opacity: 0, transform: 'translateY(110%)' }}>
-              Zero commissions, exclusive access, and full support
+              10 Lakh+ clients, zero commissions, and complete legal transparency
             </h2>
           </div>
         </div>
