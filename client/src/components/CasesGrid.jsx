@@ -97,21 +97,21 @@ export default function CasesGrid() {
   }, [cases]);
 
   return (
-    <section ref={sectionRef} id="cases" className="w-full bg-black text-white py-28 px-6 sm:px-16 border-t border-neutral-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col gap-16">
+    <section ref={sectionRef} id="cases" className="w-full bg-black text-white py-20 sm:py-24 md:py-28 px-4 sm:px-10 md:px-16 border-t border-neutral-900 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col gap-10 sm:gap-16">
 
         {/* Header */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-800 pb-6">
-          <h2 ref={titleRef} className="h1 text-white tracking-tighter" style={{ opacity: 0 }}>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-800 pb-4 sm:pb-6 gap-2 sm:gap-0">
+          <h2 ref={titleRef} className="h1 text-white tracking-tighter text-3xl sm:text-4xl md:text-5xl" style={{ opacity: 0 }}>
             OUR <span className="font-serif italic lowercase font-normal text-neutral-300">cases</span>
           </h2>
-          <span className="l1 text-xs text-neutral-400 mt-2 sm:mt-0">
+          <span className="l1 text-xs text-neutral-400">
             [ PORTFOLIO HIGHLIGHTS ]
           </span>
         </div>
 
         {/* 4 Column Cases Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {cases.map((item, idx) => (
             <article
               key={item.caseId || idx}

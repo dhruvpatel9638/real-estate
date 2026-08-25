@@ -46,20 +46,20 @@ export default function WhyChoose() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-white text-black py-28 px-6 sm:px-16 border-t border-black/10 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col gap-16">
-        <div className="text-center max-w-4xl mx-auto flex flex-col gap-4">
+    <section ref={sectionRef} className="w-full bg-white text-black py-20 sm:py-24 md:py-28 px-4 sm:px-10 md:px-16 border-t border-black/10 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16">
+        <div className="text-center max-w-4xl mx-auto flex flex-col gap-3 sm:gap-4">
           <span ref={headerRef} className="l1 text-xs text-neutral-500 uppercase tracking-widest" style={{ opacity: 0 }}>
             Why Prime Estate Network is Western India's #1 Choice
           </span>
-          <div className="overflow-hidden py-2 -my-2">
-            <h2 ref={titleRef} className="d1 text-4xl sm:text-7xl leading-tight" style={{ opacity: 0, transform: 'translateY(110%)' }}>
+          <div className="overflow-hidden py-1 sm:py-2 -my-1 sm:-my-2">
+            <h2 ref={titleRef} className="d1 text-3xl sm:text-5xl md:text-7xl leading-tight" style={{ opacity: 0, transform: 'translateY(110%)' }}>
               10 Lakh+ clients, zero commissions, and complete legal transparency
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 pt-8 border-t border-black/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-black/10">
           {benefits.map((item, idx) => (
             <div
               key={idx}

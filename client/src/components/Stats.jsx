@@ -78,7 +78,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-black text-white py-32 px-6 sm:px-16 border-t border-neutral-900 relative overflow-hidden">
+    <section ref={sectionRef} className="w-full bg-black text-white py-20 sm:py-24 md:py-32 px-4 sm:px-10 md:px-16 border-t border-neutral-900 relative overflow-hidden">
       {/* Background with parallax zoom */}
       <div className="absolute inset-0 z-0 opacity-40">
         <img
@@ -90,21 +90,21 @@ export default function Stats() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col gap-24 relative z-10">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-20 md:gap-24 relative z-10">
 
         {/* 3 Column Animated Stats Display */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 md:gap-16 text-center md:text-left">
           {stats.map((stat, i) => (
             <div
               key={i}
               ref={el => columnsRef.current[i] = el}
-              className="flex flex-col gap-4 border-l-2 pl-8"
+              className="flex flex-col gap-3 sm:gap-4 border-l-0 md:border-l-2 pl-0 md:pl-8 border-b border-neutral-800 md:border-b-0 pb-6 md:pb-0 items-center md:items-start"
               style={{ borderColor: stat.color, opacity: 0 }}
             >
-              <span className="font-extrabold tracking-tighter" style={{ color: stat.color, fontSize: 'clamp(3.5rem, 8vw, 7.5rem)', lineHeight: 0.9, fontFamily: 'var(--font-sans)' }}>
+              <span className="font-extrabold tracking-tighter" style={{ color: stat.color, fontSize: 'clamp(2.6rem, 6.5vw, 7.5rem)', lineHeight: 0.9, fontFamily: 'var(--font-sans)' }}>
                 {counts[`n${i}`]}{stat.suffix}
               </span>
-              <p className="l1 text-xs text-neutral-400 leading-relaxed max-w-xs">
+              <p className="l1 text-xs text-neutral-400 leading-relaxed max-w-xs text-center md:text-left">
                 {stat.text}
               </p>
             </div>

@@ -123,8 +123,8 @@ export default function ServicesSlider() {
   const handlePrev = () => setCurrentIdx((prev) => (prev - 1 + services.length) % services.length);
 
   return (
-    <section ref={sectionRef} id="services" className="w-full bg-white text-black py-28 px-6 sm:px-16 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col gap-14">
+    <section ref={sectionRef} id="services" className="w-full bg-white text-black py-20 sm:py-24 md:py-28 px-4 sm:px-10 md:px-16 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col gap-10 sm:gap-14">
 
         {/* Header Label */}
         <div ref={labelRef} className="flex items-center justify-between border-b border-black/10 pb-4" style={{ opacity: 0 }}>
@@ -135,29 +135,29 @@ export default function ServicesSlider() {
         </div>
 
         {/* Split Slide Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center my-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center my-4 sm:my-6">
 
           {/* Left Text & Controls */}
-          <div className="md:col-span-7 flex flex-col gap-8">
-            <div ref={titleWrapRef} className="flex flex-col gap-6">
+          <div className="md:col-span-7 flex flex-col gap-6 sm:gap-8 order-2 md:order-1">
+            <div ref={titleWrapRef} className="flex flex-col gap-4 sm:gap-6">
               <h3
-                className="h1 text-4xl sm:text-6xl text-black leading-none"
+                className="h1 text-3xl sm:text-5xl md:text-6xl text-black leading-none"
                 dangerouslySetInnerHTML={{ __html: activeService.titleHtml }}
               />
-              <p className="l1 text-sm text-neutral-700 leading-relaxed max-w-xl">
+              <p className="l1 text-xs sm:text-sm text-neutral-700 leading-relaxed max-w-xl">
                 {activeService.description}
               </p>
             </div>
 
             {/* Controls */}
-            <div ref={controlsRef} className="flex items-center gap-4 pt-6" style={{ opacity: 0 }}>
+            <div ref={controlsRef} className="flex items-center gap-4 pt-2 sm:pt-6" style={{ opacity: 0 }}>
               <button onClick={handlePrev} className="btn-circle border-black hover:bg-black hover:text-white transition-all duration-300" aria-label="Previous">
                 <ArrowLeft className="w-4 h-4" />
               </button>
               <button onClick={handleNext} className="btn-circle border-black hover:bg-black hover:text-white transition-all duration-300" aria-label="Next">
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <a href="#contact" className="ml-4 btn-pill border-black text-black hover:bg-black hover:text-white transition-all duration-300 flex items-center gap-2">
+              <a href="#contact" className="ml-2 sm:ml-4 btn-pill border-black text-black hover:bg-black hover:text-white transition-all duration-300 flex items-center gap-2 text-xs">
                 <span>let's discuss</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
@@ -165,7 +165,7 @@ export default function ServicesSlider() {
           </div>
 
           {/* Right Image Frame */}
-          <div ref={imageWrapRef} className="md:col-span-5 relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-neutral-100" style={{ opacity: 0 }}>
+          <div ref={imageWrapRef} className="md:col-span-5 relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-neutral-100 order-1 md:order-2" style={{ opacity: 0 }}>
             <img
               key={currentIdx}
               src={activeService.image}

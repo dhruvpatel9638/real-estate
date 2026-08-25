@@ -93,24 +93,24 @@ export default function TeamSlider() {
   const member = team[currentIdx];
 
   return (
-    <section ref={sectionRef} id="team" className="w-full bg-black text-white py-28 px-6 sm:px-16 border-t border-neutral-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col gap-12">
+    <section ref={sectionRef} id="team" className="w-full bg-black text-white py-20 sm:py-24 md:py-28 px-4 sm:px-10 md:px-16 border-t border-neutral-900 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-12">
         <div ref={labelRef} className="flex justify-between items-center border-b border-neutral-800 pb-4" style={{ opacity: 0 }}>
-          <span className="l1-t font-serif text-[#7a0c07] text-lg">Leadership & Vision</span>
+          <span className="l1-t font-serif text-[#7a0c07] text-base sm:text-lg">Leadership & Vision</span>
           <span className="l1 text-xs text-neutral-400">0{currentIdx + 1} / 0{team.length}</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center my-4">
-          <div ref={photoRef} className="md:col-span-5 relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-neutral-900" style={{ opacity: 0 }}>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center my-2 sm:my-4">
+          <div ref={photoRef} className="md:col-span-5 relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-neutral-900 order-1 md:order-1" style={{ opacity: 0 }}>
             <img key={currentIdx} src={member.image} alt={member.name} className="w-full h-full object-cover will-change-transform" />
           </div>
 
-          <div ref={bioRef} className="md:col-span-7 flex flex-col gap-6" style={{ opacity: 0 }}>
-            <h3 className="bio-anim h1 text-4xl sm:text-6xl text-white">{member.name}</h3>
-            <p className="bio-anim l1-t text-xl text-[#7a0c07] font-serif">{member.role}</p>
+          <div ref={bioRef} className="md:col-span-7 flex flex-col gap-4 sm:gap-6 order-2 md:order-2" style={{ opacity: 0 }}>
+            <h3 className="bio-anim h1 text-3xl sm:text-5xl md:text-6xl text-white">{member.name}</h3>
+            <p className="bio-anim l1-t text-lg sm:text-xl text-[#7a0c07] font-serif">{member.role}</p>
             <p className="bio-anim l1 text-xs text-neutral-400 leading-relaxed max-w-xl">{member.bio}</p>
 
-            <div className="bio-anim flex items-center gap-4 pt-6">
+            <div className="bio-anim flex items-center gap-4 pt-2 sm:pt-6">
               <button onClick={() => setCurrentIdx((p) => (p - 1 + team.length) % team.length)}
                 className="btn-circle border-white text-white hover:bg-white hover:text-black transition-all duration-300" aria-label="Previous">
                 <ArrowLeft className="w-4 h-4" />

@@ -40,14 +40,14 @@ export default function Partnership() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="partnership" className="w-full bg-[#f1f1f1] text-black py-28 px-6 sm:px-16 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div className="flex flex-col gap-6">
-          <span className="l1-t font-serif text-[#7a0c07] text-lg">
+    <section ref={sectionRef} id="partnership" className="w-full bg-[#f1f1f1] text-black py-20 sm:py-24 md:py-28 px-4 sm:px-10 md:px-16 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <div className="flex flex-col gap-4 sm:gap-6">
+          <span className="l1-t font-serif text-[#7a0c07] text-base sm:text-lg">
             Cooperation investment funds
           </span>
           <div ref={headlineRef} style={{ opacity: 0 }}>
-            <h2 className="h1-t text-4xl sm:text-6xl text-black leading-tight">
+            <h2 className="h1-t text-3xl sm:text-5xl md:text-6xl text-black leading-tight">
               0 cases of cancellation of transactions due to non-payment
             </h2>
           </div>
@@ -56,7 +56,7 @@ export default function Partnership() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6" style={{ perspective: '800px' }}>
+        <div className="flex flex-col gap-4 sm:gap-6" style={{ perspective: '800px' }}>
           {[
             { title: 'Guarantee', desc: 'All clients are verified by international banks, eliminating default risks and accelerating transactions.', border: '#7a0c07' },
             { title: '32%', desc: "of the company's monthly revenue generated directly from our verified global partner network.", border: '#000' },
@@ -65,10 +65,10 @@ export default function Partnership() {
             <div
               key={i}
               ref={el => cardsRef.current[i] = el}
-              className="p-8 bg-white rounded-xl shadow-md flex flex-col gap-2 border-l-4 hover:shadow-xl transition-shadow duration-300"
+              className="p-6 sm:p-8 bg-white rounded-xl shadow-md flex flex-col gap-2 border-l-4 hover:shadow-xl transition-shadow duration-300"
               style={{ borderColor: card.border, opacity: 0 }}
             >
-              <span className={`${i === 1 ? 'd1 text-5xl' : 'h1 text-2xl sm:text-3xl'} font-extrabold text-black`}>
+              <span className={`${i === 1 ? 'd1 text-4xl sm:text-5xl' : 'h1 text-xl sm:text-3xl'} font-extrabold text-black`}>
                 {card.title}
               </span>
               <p className="l1 text-xs text-neutral-600">{card.desc}</p>

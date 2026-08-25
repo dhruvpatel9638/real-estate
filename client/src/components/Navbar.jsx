@@ -26,32 +26,32 @@ export default function Navbar({ onNavigate }) {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-40 px-6 py-4 flex items-center justify-between pointer-events-none mix-blend-difference text-white">
+    <header className="fixed top-0 left-0 w-full z-40 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between pointer-events-none mix-blend-difference text-white">
       {/* Left Brand & CTA */}
-      <div className="pointer-events-auto flex items-center gap-4">
-        <a href="#introduction" className="text-xl font-extrabold tracking-tighter text-white hover:opacity-90 transition-opacity">
+      <div className="pointer-events-auto flex items-center gap-2.5 sm:gap-4">
+        <a href="#introduction" className="text-lg sm:text-xl font-extrabold tracking-tighter text-white hover:opacity-90 transition-opacity">
           PRIME <span className="font-serif italic font-normal text-[#7a0c07]">Estate</span>
         </a>
         <button
           onClick={() => handleNavClick('contact')}
-          className="btn-pill hover:bg-white hover:text-black transition-all flex items-center gap-2 group border-white/40"
+          className="btn-pill hover:bg-white hover:text-black transition-all flex items-center gap-1.5 sm:gap-2 group border-white/40 !py-1 !px-2.5 sm:!py-1.5 sm:!px-4 !text-[10px] sm:!text-xs"
         >
           <span className="l1">let's discuss</span>
-          <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </button>
       </div>
 
       {/* Right Navigation */}
-      <div className="pointer-events-auto relative flex items-center gap-6">
-        <span className="l1 hidden sm:inline-block opacity-75">new emotions?</span>
+      <div className="pointer-events-auto relative flex items-center gap-3 sm:gap-6">
+        <span className="l1 hidden md:inline-block opacity-75">new emotions?</span>
 
         {/* Navigation Dropdown Toggle */}
         <div className="relative">
           <button
             onClick={() => setNavOpen(!navOpen)}
-            className="l1 flex items-center gap-1.5 py-2 px-3 hover:opacity-80 transition-opacity"
+            className="l1 flex items-center gap-1 py-1.5 px-2 sm:py-2 sm:px-3 hover:opacity-80 transition-opacity text-xs"
           >
-            <span className="text-xs">{navOpen ? '[ - ]' : '[ + ]'}</span>
+            <span className="text-[11px] sm:text-xs">{navOpen ? '[ - ]' : '[ + ]'}</span>
             <span>navigation</span>
           </button>
 

@@ -99,7 +99,7 @@ export default function Hero() {
       <section
         ref={stickyRef}
         id="introduction"
-        className="w-full h-screen flex flex-col justify-between p-6 sm:p-12 overflow-hidden bg-black relative sticky top-0"
+        className="w-full h-screen flex flex-col justify-between p-4 sm:p-8 md:p-12 overflow-hidden bg-black relative sticky top-0"
       >
         {/* Background Luxury Villa Image */}
         <div className="absolute inset-0 z-0">
@@ -122,7 +122,7 @@ export default function Hero() {
         </div>
 
         {/* Hero Title */}
-        <div ref={titleRef} className="mt-28 sm:mt-36 max-w-7xl mx-auto text-center z-20">
+        <div ref={titleRef} className="mt-20 sm:mt-28 md:mt-36 max-w-7xl mx-auto text-center z-20 px-2">
           <h1 className="d1 text-white leading-none tracking-tight uppercase">
             Prime Real Estate <br />
             <span className="font-serif italic font-normal text-neutral-300" style={{ fontSize: '0.75em', textTransform: 'lowercase' }}>where</span>{' '}
@@ -132,9 +132,9 @@ export default function Hero() {
         </div>
 
         {/* Bottom Metadata Bar */}
-        <div ref={bottomBarRef} className="w-full flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/10 z-20 text-neutral-400 l2">
+        <div ref={bottomBarRef} className="w-full flex flex-col sm:flex-row items-center justify-between pt-4 sm:pt-8 border-t border-white/10 z-20 text-neutral-400 l2 text-center sm:text-left gap-1.5 sm:gap-0 text-[9px] sm:text-xs">
           <div>VAISHNODEVI CIRCLE, AHMEDABAD</div>
-          <div className="mt-2 sm:mt-0 font-serif italic text-white text-base">
+          <div className="font-serif italic text-white text-xs sm:text-base">
             Serving 10 Lakh+ Satisfied Clients Across Gujarat
           </div>
           <div className="hidden sm:block">ESTABLISHED 2010</div>
@@ -147,31 +147,31 @@ export default function Hero() {
           style={{ clipPath: 'polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)' }}
         >
           {/* Scroll Image Sequence Frames */}
-          <div className="absolute inset-0 z-0 flex items-center justify-center p-4 sm:p-12">
+          <div className="absolute inset-0 z-0 flex items-center justify-center p-3 sm:p-8 md:p-12">
             {/* Image 1: Luxury Villa Gujarat */}
-            <div ref={img1Ref} className="absolute w-full max-w-4xl aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
+            <div ref={img1Ref} className="absolute w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Vaishnodevi Circle Villa" className="w-full h-full object-cover" />
             </div>
 
             {/* Image 2: Penthouse Ahmedabad */}
-            <div ref={img2Ref} className="absolute w-full max-w-4xl aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
+            <div ref={img2Ref} className="absolute w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
               <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80" alt="Sky Penthouse" className="w-full h-full object-cover" />
             </div>
 
             {/* Image 3: Commercial Hub Gujarat */}
-            <div ref={img3Ref} className="absolute w-full max-w-4xl aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
+            <div ref={img3Ref} className="absolute w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
               <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=80" alt="Commercial Estate" className="w-full h-full object-cover" />
             </div>
           </div>
 
           {/* Reveal Black Text (Appears AFTER image sequence finishes on scroll) */}
-          <div ref={revealTextRef} className="relative z-10 text-center px-6 max-w-4xl" style={{ opacity: 0, color: '#000000', transformOrigin: 'center center' }}>
-            <span className="l1 text-xs uppercase tracking-widest block mb-4" style={{ color: '#000000' }}>Gujarat Premier Real Estate Network</span>
-            <h2 className="d1 uppercase tracking-tighter text-4xl sm:text-7xl leading-none" style={{ color: '#000000' }}>
+          <div ref={revealTextRef} className="relative z-10 text-center px-4 sm:px-6 max-w-4xl" style={{ opacity: 0, color: '#000000', transformOrigin: 'center center' }}>
+            <span className="l1 text-[10px] sm:text-xs uppercase tracking-widest block mb-2 sm:mb-4" style={{ color: '#000000' }}>Gujarat Premier Real Estate Network</span>
+            <h2 className="d1 uppercase tracking-tighter text-3xl sm:text-5xl md:text-7xl leading-none" style={{ color: '#000000' }}>
               Redefining <br />
               <span className="font-serif italic font-normal lowercase" style={{ color: '#000000' }}>luxury</span> living
             </h2>
-            <p className="l1 text-xs max-w-md mx-auto mt-6 leading-relaxed" style={{ color: '#000000' }}>
+            <p className="l1 text-[11px] sm:text-xs max-w-md mx-auto mt-3 sm:mt-6 leading-relaxed" style={{ color: '#000000' }}>
               Empowering families and investors across Gujarat with premium high-yield real estate assets.
             </p>
           </div>

@@ -82,29 +82,29 @@ export default function ContactSection() {
       <section
         ref={redBoxRef}
         id="contact"
-        className="w-full bg-[#7a0c07] py-32 px-6 sm:px-16 relative overflow-hidden"
+        className="w-full bg-[#7a0c07] py-20 sm:py-24 md:py-32 px-4 sm:px-10 md:px-16 relative overflow-hidden"
         style={{ clipPath: 'polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)', color: '#000000' }}
       >
-        <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-10">
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 sm:gap-10">
 
           {/* Heading */}
-          <div ref={headingRef} className="flex flex-col gap-4" style={{ opacity: 0 }}>
-            <h2 className="d1 text-4xl sm:text-7xl uppercase leading-none tracking-tight" style={{ color: '#000000' }}>
+          <div ref={headingRef} className="flex flex-col gap-3 sm:gap-4" style={{ opacity: 0 }}>
+            <h2 className="d1 text-3xl sm:text-5xl md:text-7xl uppercase leading-none tracking-tight" style={{ color: '#000000' }}>
               Ready to Find Your <br />
               <span className="font-serif italic font-normal lowercase" style={{ color: '#000000' }}>dream</span> heaven?
             </h2>
-            <p className="l1 text-xs tracking-wider" style={{ color: 'rgba(0,0,0,0.8)' }}>
+            <p className="l1 text-[11px] sm:text-xs tracking-wider" style={{ color: 'rgba(0,0,0,0.8)' }}>
               Our manager will contact you as soon as possible.
             </p>
           </div>
 
           {/* Form */}
-          <form ref={formRef} onSubmit={handleSubmit} className="w-full max-w-xl flex flex-col gap-8 mt-4">
+          <form ref={formRef} onSubmit={handleSubmit} className="w-full max-w-xl flex flex-col gap-6 sm:gap-8 mt-2 sm:mt-4">
             {['name', 'phone', 'message'].map((field, i) => (
               <div
                 key={field}
                 ref={el => inputsRef.current[i] = el}
-                className="relative border-b border-black/40 focus-within:border-black py-3 transition-colors duration-300"
+                className="relative border-b border-black/40 focus-within:border-black py-2.5 sm:py-3 transition-colors duration-300"
                 style={{ opacity: 0, transformOrigin: 'left center' }}
               >
                 <input
@@ -114,31 +114,31 @@ export default function ContactSection() {
                   placeholder={`type your ${field === 'phone' ? 'phone number' : field}...`}
                   value={formData[field]}
                   onChange={handleChange}
-                  className="w-full bg-transparent text-center h1 text-xl sm:text-2xl outline-none placeholder:text-black/60"
+                  className="w-full bg-transparent text-center h1 text-base sm:text-xl md:text-2xl outline-none placeholder:text-black/60"
                   style={{ color: '#000000' }}
                 />
               </div>
             ))}
 
             {status.success && (
-              <div className="p-4 bg-black/15 backdrop-blur rounded-lg flex items-center justify-center gap-2 l1 text-xs border border-black/20" style={{ color: '#000000' }}>
-                <CheckCircle2 className="w-5 h-5" style={{ color: '#15803d' }} />
+              <div className="p-3 sm:p-4 bg-black/15 backdrop-blur rounded-lg flex items-center justify-center gap-2 l1 text-[11px] sm:text-xs border border-black/20" style={{ color: '#000000' }}>
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#15803d' }} />
                 <span>Thank you! Your inquiry has been sent successfully.</span>
               </div>
             )}
 
             {status.error && (
-              <div className="p-4 bg-black/50 rounded-lg flex items-center justify-center gap-2 l1 text-xs border border-red-900/40" style={{ color: '#ffffff' }}>
-                <AlertCircle className="w-5 h-5" style={{ color: '#fca5a5' }} />
+              <div className="p-3 sm:p-4 bg-black/50 rounded-lg flex items-center justify-center gap-2 l1 text-[11px] sm:text-xs border border-red-900/40" style={{ color: '#ffffff' }}>
+                <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#fca5a5' }} />
                 <span>{status.error}</span>
               </div>
             )}
 
-            <div className="mt-4 flex justify-center">
+            <div className="mt-2 sm:mt-4 flex justify-center">
               <button
                 type="submit"
                 disabled={status.loading}
-                className="btn-pill border-black hover:bg-white hover:text-black transition-colors duration-300 px-12 py-4 shadow-xl"
+                className="btn-pill border-black hover:bg-white hover:text-black transition-colors duration-300 px-8 sm:px-12 py-3 sm:py-4 shadow-xl text-xs sm:text-sm"
                 style={{ backgroundColor: '#000000', color: '#ffffff' }}
               >
                 {status.loading ? (
