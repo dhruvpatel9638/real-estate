@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import amyaLogoImg from '../Assets/AMYALOGO.png';
 
 export default function AmyaPreloader({ onComplete }) {
   const [isFinished, setIsFinished] = useState(false);
@@ -51,7 +50,7 @@ export default function AmyaPreloader({ onComplete }) {
             {/* Center Logo Image */}
             <div className="flex items-center justify-center">
               <img
-                src={amyaLogoImg}
+                src="/AMYALOGO.png"
                 alt="Amya Growth Logo"
                 className="w-[280px] max-w-[80vw] h-auto object-contain drop-shadow-[0_12px_24px_rgba(39,83,84,0.1)]"
               />

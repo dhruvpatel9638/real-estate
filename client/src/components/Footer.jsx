@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowUp } from 'lucide-react';
-import amyaLogoImg from '../assets/AMYALOGO.png';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -26,7 +25,7 @@ export default function Footer() {
             <div className="text-xs text-neutral-400 font-sans tracking-wide flex items-center gap-2 mt-1">
               <span>Created & Maintained by</span>
               <div className="flex items-center gap-1.5 bg-neutral-900/80 px-2.5 py-1 rounded-md border border-neutral-800">
-                <img src={amyaLogoImg} alt="Amya Growth" className="h-3.5 w-auto object-contain" />
+                <img src="/AMYALOGO.png" alt="Amya Growth" className="h-3.5 w-auto object-contain" />
                 <span className="font-bold text-white tracking-wider text-[11px]">AMYA GROWTH</span>
               </div>
             </div>
