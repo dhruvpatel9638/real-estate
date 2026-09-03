@@ -2,17 +2,25 @@ import React from 'react';
 
 export default function PartnerTicker() {
   const developerLogos = [
-    // 1. LODHA
+    // 1. LODHA — Official logo
     {
       id: 'lodha',
       render: () => (
-        <div className="flex flex-col items-center justify-center px-4">
-          <span className="text-2xl font-serif font-black tracking-[0.2em] text-neutral-900 leading-none">
-            LODHA
-          </span>
-          <span className="text-[8px] font-sans tracking-[0.25em] text-neutral-500 uppercase mt-1 font-semibold">
-            BUILDING A BETTER LIFE
-          </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://www.lodhagroup.com/assets/images/lodha-logo.svg"
+            alt="Lodha"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex flex-col items-center justify-center">
+            <span className="text-2xl font-serif font-black tracking-[0.2em] text-neutral-900 leading-none">LODHA</span>
+            <span className="text-[8px] font-sans tracking-[0.25em] text-neutral-500 uppercase mt-1 font-semibold">BUILDING A BETTER LIFE</span>
+          </div>
         </div>
       )
     },
@@ -21,20 +29,27 @@ export default function PartnerTicker() {
     {
       id: 'adani-realty',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          {/* Official Adani tri-color gradient wave icon */}
-          <svg className="w-8 h-8 shrink-0" viewBox="0 0 40 40" fill="none">
-            <path d="M8 28C14 16 26 14 32 8" stroke="#0091D5" strokeWidth="4" strokeLinecap="round" />
-            <path d="M12 32C18 20 28 18 34 12" stroke="#5C2D91" strokeWidth="3.5" strokeLinecap="round" />
-            <path d="M16 36C22 24 30 22 36 16" stroke="#ED1B2F" strokeWidth="3" strokeLinecap="round" />
-          </svg>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-neutral-900 font-sans leading-none lowercase">
-              adani
-            </span>
-            <span className="text-[10px] font-semibold tracking-wider text-[#0091D5] uppercase font-sans">
-              Realty
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="/adani_realty.svg"
+            alt="Adani Realty"
+            className="h-8 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex items-center gap-2.5">
+            <svg className="w-8 h-8 shrink-0" viewBox="0 0 40 40" fill="none">
+              <path d="M8 28C14 16 26 14 32 8" stroke="#0091D5" strokeWidth="4" strokeLinecap="round" />
+              <path d="M12 32C18 20 28 18 34 12" stroke="#5C2D91" strokeWidth="3.5" strokeLinecap="round" />
+              <path d="M16 36C22 24 30 22 36 16" stroke="#ED1B2F" strokeWidth="3" strokeLinecap="round" />
+            </svg>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold tracking-tight text-neutral-900 font-sans leading-none lowercase">adani</span>
+              <span className="text-[10px] font-semibold tracking-wider text-[#0091D5] uppercase font-sans">Realty</span>
+            </div>
           </div>
         </div>
       )
@@ -44,14 +59,22 @@ export default function PartnerTicker() {
     {
       id: 'godrej-properties',
       render: () => (
-        <div className="flex items-center gap-2 px-4">
-          <span className="text-2xl font-serif italic font-bold tracking-tight text-[#E31B23] leading-none">
-            Godrej
-          </span>
-          <div className="h-5 w-[1.5px] bg-neutral-300 mx-0.5"></div>
-          <span className="text-xs font-sans font-extrabold tracking-[0.2em] text-neutral-800 uppercase">
-            PROPERTIES
-          </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="/godrej_properties_logo.svg"
+            alt="Godrej Properties"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex items-center gap-2">
+            <span className="text-2xl font-serif italic font-bold tracking-tight text-[#E31B23] leading-none">Godrej</span>
+            <div className="h-5 w-[1.5px] bg-neutral-300 mx-0.5"></div>
+            <span className="text-xs font-sans font-extrabold tracking-[0.2em] text-neutral-800 uppercase">PROPERTIES</span>
+          </div>
         </div>
       )
     },
@@ -60,101 +83,114 @@ export default function PartnerTicker() {
     {
       id: 'oberoi-realty',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          {/* Official Oberoi Realty deep red monogram box */}
-          <div className="w-8 h-8 bg-[#8B1E2D] rounded flex items-center justify-center text-white font-serif font-black text-sm tracking-tighter shadow-sm">
-            OR
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-sans font-black tracking-[0.15em] text-neutral-900 leading-none">
-              OBEROI
-            </span>
-            <span className="text-[10px] font-sans font-bold tracking-[0.25em] text-[#8B1E2D] leading-none mt-1">
-              REALTY
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://m.economictimes.com/thumb/msid-104644180,width-1600,height-900,resizemode-4,imgsize-16736/oberoi-realty-price-return-in-fy24-so-far-38.jpg"
+            alt="Oberoi Realty"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex items-center gap-2.5">
+            <div className="w-8 h-8 bg-[#8B1E2D] rounded flex items-center justify-center text-white font-serif font-black text-sm tracking-tighter shadow-sm">OR</div>
+            <div className="flex flex-col">
+              <span className="text-sm font-sans font-black tracking-[0.15em] text-neutral-900 leading-none">OBEROI</span>
+              <span className="text-[10px] font-sans font-bold tracking-[0.25em] text-[#8B1E2D] leading-none mt-1">REALTY</span>
+            </div>
           </div>
         </div>
       )
     },
 
-    // 5. HN SAFAL
+    // 5. HN SAFAL — Official logo from hnsafal.com
     {
       id: 'hn-safal',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          <div className="w-8 h-8 rounded-full border-2 border-[#7a0c07] flex items-center justify-center text-[#7a0c07] font-sans font-black text-xs">
-            hn
-          </div>
-          <div className="flex flex-col">
-            <span className="text-lg font-sans font-black tracking-[0.18em] text-neutral-900 leading-none">
-              SAFAL
-            </span>
-            <span className="text-[8px] font-sans font-semibold tracking-[0.2em] text-neutral-400 uppercase">
-              AHMEDABAD
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://www.hnsafal.com/wp-content/uploads/2025/04/HN-SAFAL-LOGO-HD-1.webp"
+            alt="HN Safal"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex items-center gap-2">
+            <span className="text-lg font-sans font-black tracking-[0.18em] text-neutral-900">HN SAFAL</span>
           </div>
         </div>
       )
     },
 
-    // 6. GOYAL & CO.
+    // 6. GOYAL & CO. — Official logo
     {
       id: 'goyal-co',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          <svg className="w-7 h-7 text-[#0a3d62]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="12" cy="12" r="10" />
-            <polygon points="12 2 15 12 12 22 9 12" fill="currentColor" opacity="0.2" />
-            <polygon points="2 12 12 15 22 12 12 9" fill="currentColor" opacity="0.2" />
-          </svg>
-          <div className="flex flex-col">
-            <span className="text-sm font-serif font-black tracking-[0.15em] text-neutral-900 leading-none">
-              GOYAL & CO.
-            </span>
-            <span className="text-[8px] font-sans font-semibold tracking-[0.25em] text-neutral-500 uppercase mt-0.5">
-              ESTD. 1971
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="/goyal-logo.png"
+            alt="Goyal & Co."
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex flex-col items-start justify-center">
+            <span className="text-sm font-serif font-black tracking-[0.15em] text-neutral-900 leading-none">GOYAL & CO.</span>
+            <span className="text-[8px] font-sans font-semibold tracking-[0.25em] text-neutral-500 uppercase mt-0.5">ESTD. 1971</span>
           </div>
         </div>
       )
     },
 
-    // 7. HIRANANDANI
+    // 7. HIRANANDANI — Official logo
     {
       id: 'hiranandani',
       render: () => (
-        <div className="flex flex-col items-center justify-center px-4">
-          <div className="flex items-center gap-1.5">
-            <svg className="w-4 h-4 text-[#C9A96E]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3.5L6 20l1.5-6.5L3 9l6-1 3-6z" />
-            </svg>
-            <span className="text-base font-serif font-bold tracking-[0.18em] text-neutral-900 leading-none">
-              HIRANANDANI
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="/hiranandani-logo.png"
+            alt="Hiranandani"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex flex-col items-center justify-center">
+            <span className="text-base font-serif font-bold tracking-[0.18em] text-neutral-900 leading-none">HIRANANDANI</span>
+            <span className="text-[8px] font-serif italic text-neutral-500 mt-0.5">creating communities</span>
           </div>
-          <span className="text-[8px] font-serif italic text-neutral-500 mt-0.5">
-            creating communities
-          </span>
         </div>
       )
     },
 
-    // 8. KALPATARU
+    // 8. KALPATARU — Official logo
     {
       id: 'kalpataru',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          {/* Kalpataru tree crest mark */}
-          <svg className="w-7 h-7 text-[#2E7D32]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-            <path d="M12 22V10" />
-            <path d="M12 10c0-4 6-6 6-6s0 4-6 6z" fill="#2E7D32" fillOpacity="0.25" />
-            <path d="M12 10c0-4-6-6-6-6s0 4 6 6z" fill="#2E7D32" fillOpacity="0.25" />
-            <path d="M12 15c0-3 5-4.5 5-4.5s0 3-5 4.5z" fill="#2E7D32" fillOpacity="0.25" />
-            <path d="M12 15c0-3-5-4.5-5-4.5s0 3 5 4.5z" fill="#2E7D32" fillOpacity="0.25" />
-          </svg>
-          <span className="text-sm font-sans font-extrabold tracking-[0.2em] text-neutral-900 uppercase">
-            KALPATARU
-          </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://www.ssll.in/downloads/96206110Logo-Kalpataru-1-1-1.png"
+            alt="Kalpataru"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex items-center gap-2">
+            <span className="text-sm font-sans font-extrabold tracking-[0.2em] text-neutral-900 uppercase">KALPATARU</span>
+          </div>
         </div>
       )
     },
@@ -172,78 +208,94 @@ export default function PartnerTicker() {
       )
     },
 
-    // 10. SHILP GROUP
+    // 10. SHILP GROUP — Official logo
     {
       id: 'shilp',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          <div className="w-7 h-7 bg-[#7a0c07] text-white flex items-center justify-center font-sans font-black text-sm rounded-sm">
-            S
-          </div>
-          <div className="flex flex-col">
-            <span className="text-base font-sans font-black tracking-[0.15em] text-neutral-900 leading-none">
-              SHILP
-            </span>
-            <span className="text-[8px] font-sans font-semibold tracking-[0.25em] text-neutral-400 uppercase">
-              GROUP
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScG9-yAR7mO12KvtbT_p3wIOHNQgz-_m13KaKrkS0LHQ&s=10"
+            alt="Shilp Group"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex items-center gap-1.5">
+            <div className="w-7 h-7 bg-[#7a0c07] text-white flex items-center justify-center font-sans font-black text-sm rounded-sm">S</div>
+            <span className="text-base font-sans font-black tracking-[0.15em] text-neutral-900">SHILP</span>
           </div>
         </div>
       )
     },
 
-    // 11. SUN BUILDERS GROUP
+    // 11. SUN BUILDERS GROUP — Official logo from sunbuilders.in
     {
       id: 'sun-builders',
       render: () => (
-        <div className="flex items-center gap-2 px-4">
-          <svg className="w-7 h-7 text-[#F57C00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="12" cy="12" r="5" fill="#F57C00" fillOpacity="0.3" />
-            <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-          </svg>
-          <div className="flex flex-col">
-            <span className="text-xs font-sans font-black tracking-[0.15em] text-neutral-900 leading-none">
-              SUN BUILDERS
-            </span>
-            <span className="text-[7.5px] font-sans font-bold tracking-[0.2em] text-neutral-400 uppercase mt-0.5">
-              GROUP AHMEDABAD
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://sunbuilders.in/images/sun-builders-logo.png"
+            alt="Sun Builders Group"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex items-center gap-2">
+            <span className="text-xs font-sans font-black tracking-[0.15em] text-neutral-900 uppercase">SUN BUILDERS</span>
           </div>
         </div>
       )
     },
 
-    // 12. B SAFAL
+    // 12. B SAFAL — Official logo from bsafal.com
     {
       id: 'b-safal',
       render: () => (
-        <div className="flex items-center gap-2 px-4">
-          <svg className="w-6 h-6 text-[#7a0c07]" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L2 20h20L12 2zm0 5.5l5.5 10.5h-11L12 7.5z" />
-          </svg>
-          <span className="text-base font-sans font-black tracking-[0.15em] text-neutral-900 uppercase">
-            B-SAFAL
-          </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://bsafal.com/wp-content/uploads/2023/10/Bsafal_Logo_70px-2-1.png"
+            alt="B-Safal"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex items-center gap-2">
+            <span className="text-base font-sans font-black tracking-[0.15em] text-neutral-900 uppercase">B-SAFAL</span>
+          </div>
         </div>
       )
     },
 
-    // 13. SHIVALIK GROUP (Gujarat)
+    // 13. SHIVALIK GROUP (Gujarat) — Official logo from shivalikgroup.com
     {
       id: 'shivalik',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          {/* Shivalik signature green/teal triangular geometry logo */}
-          <svg className="w-8 h-8 shrink-0" viewBox="0 0 40 40" fill="none">
-            <polygon points="20,4 36,34 4,34" fill="#0D5C75" />
-            <polygon points="20,12 30,32 10,32" fill="#148A9D" />
-            <polygon points="20,20 25,30 15,30" fill="#48B49F" />
-          </svg>
-          <div className="flex flex-col">
-            <span className="text-base font-sans font-black tracking-[0.18em] text-neutral-900 leading-none">
-              SHIVALIK
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://shivalikgroup.com/main-logo.svg"
+            alt="Shivalik Group"
+            className="h-10 w-auto object-contain"
+            style={{ filter: 'none' }}
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback if image fails to load */}
+          <div style={{ display: 'none' }} className="flex flex-col items-start justify-center border-l-[3px] border-[#0D7A8A] pl-3">
+            <span className="text-xl font-sans font-black tracking-[0.12em] leading-none" style={{ color: '#0D5C75' }}>
+              Shivalik
             </span>
-            <span className="text-[7.5px] font-sans font-bold tracking-[0.2em] text-[#0D5C75] uppercase mt-0.5">
+            <span className="text-[7.5px] font-sans font-semibold tracking-[0.22em] text-neutral-500 uppercase mt-1">
               SPACE • LEGACY • TRUST
             </span>
           </div>
@@ -251,62 +303,70 @@ export default function PartnerTicker() {
       )
     },
 
-    // 14. ISCON GROUP (Gujarat)
+    // 14. ISCON GROUP (Gujarat) — Official logo from iscongroup.com
     {
       id: 'iscon',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          <div className="w-8 h-8 rounded-full bg-[#004B87] flex items-center justify-center text-white font-sans font-black text-xs shadow-sm">
-            I
-          </div>
-          <div className="flex flex-col">
-            <span className="text-base font-sans font-black tracking-[0.2em] text-neutral-900 leading-none">
-              ISCON
-            </span>
-            <span className="text-[7.5px] font-sans font-bold tracking-[0.18em] text-neutral-400 uppercase mt-0.5">
-              GROUP GUJARAT
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://iscongroup.com/assets/img/logo-black.png"
+            alt="Iscon Group"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex flex-col items-start justify-center">
+            <span className="text-xl font-sans font-black tracking-[0.25em] leading-none" style={{ color: '#003F87' }}>ISCON</span>
+            <span className="text-[7px] font-sans font-bold tracking-[0.2em] text-neutral-500 uppercase mt-0.5">GROUP • GUJARAT</span>
           </div>
         </div>
       )
     },
 
-    // 15. SAVVY GROUP (GIFT City & Ahmedabad)
+    // 15. SAVVY GROUP — Official logo from savvygroup.in
     {
       id: 'savvy',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          <div className="w-7 h-7 border-2 border-[#1E88E5] rounded flex items-center justify-center text-[#1E88E5] font-serif font-black text-sm">
-            S
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-sans font-black tracking-[0.2em] text-neutral-900 leading-none">
-              SAVVY
-            </span>
-            <span className="text-[7.5px] font-sans font-semibold tracking-[0.15em] text-neutral-400 uppercase mt-0.5">
-              GIFT CITY & AHMEDABAD
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://savvygroup.in/media/images/logo.webp"
+            alt="Savvy Group"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback */}
+          <div style={{ display: 'none' }} className="flex flex-col items-start justify-center">
+            <span className="font-sans font-black tracking-[-0.02em] leading-none text-2xl" style={{ color: '#1B3A5C' }}>savvy</span>
+            <span className="text-[7px] font-sans font-semibold tracking-[0.25em] text-neutral-400 uppercase mt-0.5">REALTY GROUP</span>
           </div>
         </div>
       )
     },
 
-    // 16. SHEETAL INFRA (Gujarat)
+    // 16. SHEETAL INFRA — Official logo
     {
       id: 'sheetal',
       render: () => (
-        <div className="flex items-center gap-2.5 px-4">
-          <svg className="w-6 h-6 text-[#7a0c07]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="3" y="3" width="18" height="18" rx="3" />
-            <path d="M3 9h18M9 21V9" />
-          </svg>
-          <div className="flex flex-col">
-            <span className="text-sm font-sans font-black tracking-[0.15em] text-neutral-900 leading-none">
-              SHEETAL
-            </span>
-            <span className="text-[7.5px] font-sans font-semibold tracking-[0.2em] text-neutral-400 uppercase mt-0.5">
-              INFRASTRUCTURE
-            </span>
+        <div className="flex items-center justify-center px-4">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCCSBpaOrf6bQwSDcTOuMaO4_6LrGjqTRCWUDKFXjAvA&s=10"
+            alt="Sheetal Infrastructure"
+            className="h-10 w-auto object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback — merged styles to prevent double style prop bug */}
+          <div style={{ display: 'none', borderBottomWidth: '3px', borderBottomStyle: 'solid', borderColor: '#E87722' }} className="flex flex-col items-start justify-center pb-0.5">
+            <span className="text-lg font-sans font-black tracking-[0.2em] leading-none text-neutral-900">SHEETAL</span>
+            <span className="text-[7px] font-sans font-bold tracking-[0.22em] uppercase mt-0.5" style={{ color: '#E87722' }}>INFRASTRUCTURE</span>
           </div>
         </div>
       )

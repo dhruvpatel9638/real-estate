@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUp } from 'lucide-react';
+import amyaLogoImg from '../assets/AMYALOGO.png';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -18,9 +19,18 @@ export default function Footer() {
           <p className="l1-t text-xs text-neutral-400 max-w-sm leading-relaxed">
             Exclusive real estate agency specializing in luxury residential & commercial properties in Vaishnodevi Circle, Ahmedabad.
           </p>
-          <p className="l2 text-neutral-500 mt-2">
-            © {new Date().getFullYear()} PRIME REAL ESTATE. ALL RIGHTS RESERVED.
-          </p>
+          <div className="flex flex-col gap-1.5 mt-2">
+            <p className="l2 text-neutral-500 text-xs tracking-wider">
+              © {new Date().getFullYear()} PRIME REAL ESTATE. ALL RIGHTS RESERVED.
+            </p>
+            <div className="text-xs text-neutral-400 font-sans tracking-wide flex items-center gap-2 mt-1">
+              <span>Created & Maintained by</span>
+              <div className="flex items-center gap-1.5 bg-neutral-900/80 px-2.5 py-1 rounded-md border border-neutral-800">
+                <img src={amyaLogoImg} alt="Amya Growth" className="h-3.5 w-auto object-contain" />
+                <span className="font-bold text-white tracking-wider text-[11px]">AMYA GROWTH</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Right Nav & Back to Top */}

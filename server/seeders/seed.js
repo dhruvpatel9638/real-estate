@@ -9,10 +9,10 @@ dotenv.config();
 const connStr = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/prime_estate';
 
 const cases = [
-  { caseId: '1', counter: '001', title: 'Vaishnodevi Royal Villas', developer: 'Prime Developers', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80' },
-  { caseId: '2', counter: '002', title: 'SG Highway Sky Penthouse', developer: 'Prime Living', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80' },
-  { caseId: '3', counter: '003', title: 'SP Ring Road Grand Estate', developer: 'Prime Signature', image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80' },
-  { caseId: '4', counter: '004', title: 'Vaishnodevi Luxury Heights', developer: 'Prime Group', image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1000&q=80' }
+  { caseId: '1', counter: '001', title: 'Vaishnodevi Royal Villa', developer: 'Prime Gujarat Network', image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '2', counter: '002', title: 'SG Highway Sky Penthouse', developer: 'Prime Signature Living', image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '3', counter: '003', title: 'GIFT City Financial Tower', developer: 'Prime Commercial Gujarat', image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '4', counter: '004', title: 'Vesu Grand Estate', developer: 'Prime Heritage Gujarat', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1000&q=80' }
 ];
 
 const team = [
@@ -20,19 +20,19 @@ const team = [
     name: 'Rajesh Patel',
     role: 'Founder & Managing Director',
     bio: 'Pioneering luxury real estate developments in Vaishnodevi Circle, Ahmedabad with over 18 years of experience.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80'
+    image: '/instagram-default-avatar.svg'
   },
   {
     name: 'Ananya Sharma',
     role: 'Head of Luxury Acquisitions',
     bio: 'Specializing in ultra-luxury villas and penthouses across Vaishnodevi Circle and S.G. Highway for HNI clients.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80'
+    image: '/instagram-default-avatar.svg'
   },
   {
     name: 'Vikram Mehta',
     role: 'Chief Investment Officer',
     bio: 'Structuring high-yield commercial and residential portfolio investments in Ahmedabad prime growth corridors.',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1000&q=80'
+    image: '/instagram-default-avatar.svg'
   }
 ];
 

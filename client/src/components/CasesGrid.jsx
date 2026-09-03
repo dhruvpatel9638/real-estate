@@ -17,34 +17,44 @@ export default function CasesGrid() {
       counter: '01',
       title: 'Vaishnodevi Royal Villa — Ahmedabad',
       developer: 'Prime Gujarat Network',
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80'
     },
     {
       caseId: '2',
       counter: '02',
       title: 'SG Highway Sky Penthouse — Ahmedabad',
       developer: 'Prime Signature Living',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=80'
     },
     {
       caseId: '3',
       counter: '03',
       title: 'GIFT City Financial Tower — Gandhinagar',
       developer: 'Prime Commercial Gujarat',
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1000&q=80'
     },
     {
       caseId: '4',
       counter: '04',
       title: 'Vesu Grand Estate — Surat',
       developer: 'Prime Heritage Gujarat',
-      image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1000&q=80'
     }
   ];
 
   useEffect(() => {
     fetchCases()
-      .then((data) => setCases(data && data.length ? data : defaultCases))
+      .then((data) => {
+        if (data && data.length) {
+          const merged = data.map((item, idx) => ({
+            ...item,
+            image: defaultCases[idx]?.image || item.image
+          }));
+          setCases(merged);
+        } else {
+          setCases(defaultCases);
+        }
+      })
       .catch((err) => {
         console.error('Failed to load cases:', err);
         setCases(defaultCases);

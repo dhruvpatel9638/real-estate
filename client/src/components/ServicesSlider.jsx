@@ -20,7 +20,7 @@ export default function ServicesSlider() {
       titleHtml: 'Gujarat Premier <i>Estate</i> <i>Advisory</i>',
       titlePlain: 'Gujarat Premier Estate Advisory',
       description: 'Exclusive real estate advisory covering premier residential, penthouses, and luxury villas across Ahmedabad, GIFT City, Surat & Vadodara.',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80'
     },
     {
       titleHtml: 'Commercial Hubs & <i>IT Park</i> <i>Leasing</i>',
@@ -32,7 +32,7 @@ export default function ServicesSlider() {
       titleHtml: 'NRI Investment & <i>Wealth</i> <i>Portfolios</i>',
       titlePlain: 'NRI Investment & Wealth Portfolios',
       description: 'White-glove real estate wealth management for NRIs and High-Net-Worth Individuals investing in India’s fastest-growing corridors.',
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1000&q=80'
     }
   ];
 

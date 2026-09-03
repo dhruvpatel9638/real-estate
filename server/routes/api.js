@@ -9,34 +9,30 @@ const router = express.Router();
 
 // Fallback initial data in case MongoDB is empty or unseeded
 const FALLBACK_CASES = [
-  { caseId: '1', counter: '001', title: 'Damac Hills Luxury Villa', developer: 'Damac Properties', image: 'https://cdn.fame-estate.com/team1_6263c4b459.jpg' },
-  { caseId: '2', counter: '002', title: 'Luxe Waterfront Residences', developer: 'Luxe Development', image: 'https://cdn.fame-estate.com/team3_fb12944350.png' },
-  { caseId: '3', counter: '003', title: 'Palm Jumeirah Bay Estates', developer: 'Nakheel', image: 'https://cdn.fame-estate.com/team2_82704b4f06.png' },
-  { caseId: '4', counter: '004', title: 'Six Senses Residences Dubai', developer: 'Six Senses', image: 'https://cdn.fame-estate.com/service_01a01267d4.png' },
-  { caseId: '5', counter: '005', title: 'Cavalli Tower Penthouses', developer: 'Damac Properties', image: 'https://cdn.fame-estate.com/service2_db4b58f8b4.png' },
-  { caseId: '6', counter: '006', title: 'The World Islands Private Retreat', developer: 'Luxe Development', image: 'https://cdn.fame-estate.com/service_3_5e30da923e.png' },
-  { caseId: '7', counter: '007', title: 'Jumeirah Islands Ocean Villa', developer: 'Nakheel', image: 'https://cdn.fame-estate.com/service3_fa7030456f.webp' },
-  { caseId: '8', counter: '008', title: 'Royal Atlantis Private Mansions', developer: 'Six Senses', image: 'https://cdn.fame-estate.com/service1_23ad1a8002.webp' }
+  { caseId: '1', counter: '001', title: 'Vaishnodevi Royal Villa', developer: 'Prime Gujarat Network', image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '2', counter: '002', title: 'SG Highway Sky Penthouse', developer: 'Prime Signature Living', image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '3', counter: '003', title: 'GIFT City Financial Tower', developer: 'Prime Commercial Gujarat', image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1000&q=80' },
+  { caseId: '4', counter: '004', title: 'Vesu Grand Estate', developer: 'Prime Heritage Gujarat', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1000&q=80' }
 ];
 
 const FALLBACK_TEAM = [
   {
-    name: 'Vladislav Blazhennov',
-    role: 'Founder & CEO, Fame',
-    bio: 'Digital marketing expert with 9 years of experience in creating effective advertising campaigns, turning them into a stream of quality leads.',
-    image: 'https://cdn.fame-estate.com/team1_6263c4b459.jpg'
+    name: 'Rajesh Patel',
+    role: 'Managing Director & Founder',
+    bio: 'Pioneering luxury real estate developments in Vaishnodevi Circle, Ahmedabad. Over 18 years of expertise in high-end residential estates.',
+    image: '/instagram-default-avatar.svg'
   },
   {
-    name: 'Daria Blazhenova',
-    role: 'Sales Director',
-    bio: 'A true master of negotiations and a sales expert with 10 years of experience. Possesses an innate intuition for sales, strategic thinking, and top-tier deal execution.',
-    image: 'https://cdn.fame-estate.com/team3_fb12944350.png'
+    name: 'Ananya Sharma',
+    role: 'Head of Luxury Acquisitions',
+    bio: 'Specializing in ultra-luxury villas and penthouses across Vaishnodevi Circle and S.G. Highway, advising HNI clients globally.',
+    image: '/instagram-default-avatar.svg'
   },
   {
-    name: 'Aleksandr Grigorev',
-    role: 'Project Director',
-    bio: 'Analytical mindset, expert in working with data and forecasts. Master of working with spreadsheets, projections, and long-term strategies.',
-    image: 'https://cdn.fame-estate.com/team2_82704b4f06.png'
+    name: 'Vikram Mehta',
+    role: 'Chief Investment Officer',
+    bio: 'Structuring high-yield commercial and residential portfolio investments in Ahmedabad prime growth corridors.',
+    image: '/instagram-default-avatar.svg'
   }
 ];
 

@@ -20,7 +20,7 @@ export default function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Scroll-driven animation timeline tied to container height (300vh for multi-stage scroll)
+      // Scroll-driven animation timeline tied to container height (420vh for balanced scroll pacing)
       const scrollTl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
@@ -32,61 +32,61 @@ export default function Hero() {
         }
       });
 
-      // 1. Initial hero title & elements are 100% visible at scroll 0, fade out smoothly on scroll (0 to 0.2)
+      // 1. Initial hero title & elements fade out (0 to 0.08)
       scrollTl.fromTo(titleRef.current,
         { opacity: 1, y: 0, scale: 1 },
-        { opacity: 0, y: -40, scale: 0.95, duration: 0.2, ease: 'power1.out' },
+        { opacity: 0, y: -40, scale: 0.95, duration: 0.08, ease: 'power1.out' },
         0
       );
 
       scrollTl.fromTo([symbolRef.current, circleRef.current, bottomBarRef.current],
         { opacity: 0.4, scale: 1 },
-        { opacity: 0, scale: 0.8, duration: 0.2, ease: 'power1.out' },
+        { opacity: 0, scale: 0.8, duration: 0.08, ease: 'power1.out' },
         0
       );
 
-      // 2. Red curtain expands from center to full screen (0.05 to 0.3)
+      // 2. Red curtain expands from center (0.02 to 0.10)
       scrollTl.fromTo(redScreenRef.current,
         { clipPath: 'polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)', opacity: 1 },
-        { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 0.25, ease: 'power2.inOut' },
-        0.05
+        { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 0.08, ease: 'power2.inOut' },
+        0.02
       );
 
-      // 3. Multi-Image Scroll Sequence (0.25 to 0.65):
-      // Image 1 fades in with zoom-out
+      // 3. Multi-Image Scroll Sequence (Balanced scroll timing for comfortable browsing):
+      // Image 1: Ahmedabad Modern Building (appears at 0.10, holds to 0.35)
       scrollTl.fromTo(img1Ref.current,
         { opacity: 0, scale: 1.15 },
-        { opacity: 1, scale: 1, duration: 0.15, ease: 'power2.out' },
-        0.2
+        { opacity: 1, scale: 1, duration: 0.12, ease: 'power2.out' },
+        0.10
       );
 
-      // Image 2 slides in from right over Image 1 (0.35 to 0.5)
+      // Image 2: GIFT City Glass Skyscraper (slides in at 0.35, holds to 0.60)
       scrollTl.fromTo(img2Ref.current,
         { opacity: 0, x: '100%' },
-        { opacity: 1, x: '0%', duration: 0.2, ease: 'power2.inOut' },
+        { opacity: 1, x: '0%', duration: 0.15, ease: 'power2.inOut' },
         0.35
       );
 
-      // Image 3 slides in from bottom over Image 2 (0.5 to 0.65)
+      // Image 3: Mondeal Square (slides in at 0.60, holds to 0.82)
       scrollTl.fromTo(img3Ref.current,
         { opacity: 0, y: '100%' },
-        { opacity: 1, y: '0%', duration: 0.2, ease: 'power2.inOut' },
-        0.5
+        { opacity: 1, y: '0%', duration: 0.15, ease: 'power2.inOut' },
+        0.60
       );
 
-      // 4. All images fade out COMPLETELY to opacity 0 (0.65 to 0.72)
+      // 4. All images fade out (0.82 to 0.88)
       scrollTl.to([img1Ref.current, img2Ref.current, img3Ref.current], {
         opacity: 0,
-        scale: 0.9,
-        duration: 0.12,
+        scale: 0.95,
+        duration: 0.06,
         ease: 'power2.in'
-      }, 0.62);
+      }, 0.82);
 
-      // 5. THEN Black Text reveals by opening VERTICALLY from center (slower, smoother vertical expansion)
+      // 5. Final Black Text reveals (0.88 to 1.0)
       scrollTl.fromTo(revealTextRef.current,
         { opacity: 0, scaleY: 0.2, clipPath: 'polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)' },
-        { opacity: 1, scaleY: 1, clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 0.38, ease: 'power1.out' },
-        0.68
+        { opacity: 1, scaleY: 1, clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 0.12, ease: 'power1.out' },
+        0.88
       );
 
     }, containerRef);
@@ -95,20 +95,20 @@ export default function Hero() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full" style={{ height: '300vh' }}>
+    <div ref={containerRef} className="relative w-full" style={{ height: '420vh' }}>
       <section
         ref={stickyRef}
         id="introduction"
         className="w-full h-screen flex flex-col justify-between p-4 sm:p-8 md:p-12 overflow-hidden bg-black relative sticky top-0"
       >
-        {/* Background Luxury Villa Image */}
+        {/* Background Luxury High-Rise Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80"
+            src="https://img.magnific.com/premium-photo/architectural-majesty-exploring-essence-buildings_1106493-48367.jpg"
             alt="Prime estate luxury background"
             className="w-full h-full object-cover grayscale brightness-50"
           />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
         </div>
 
         {/* Decorative Central Symbols */}
@@ -148,19 +148,19 @@ export default function Hero() {
         >
           {/* Scroll Image Sequence Frames */}
           <div className="absolute inset-0 z-0 flex items-center justify-center p-3 sm:p-8 md:p-12">
-            {/* Image 1: Luxury Villa Gujarat */}
+            {/* Image 1: Ahmedabad Modern Unique Building Exterior */}
             <div ref={img1Ref} className="absolute w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Vaishnodevi Circle Villa" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1600&q=80" alt="Ahmedabad Modern Building Exterior" className="w-full h-full object-cover" />
             </div>
 
-            {/* Image 2: Penthouse Ahmedabad */}
+            {/* Image 2: GIFT City Glass Skyscraper Exterior */}
             <div ref={img2Ref} className="absolute w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80" alt="Sky Penthouse" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="GIFT City Financial Skyscraper Exterior" className="w-full h-full object-cover" />
             </div>
 
-            {/* Image 3: Commercial Hub Gujarat */}
+            {/* Image 3: Mondeal Square Ahmedabad */}
             <div ref={img3Ref} className="absolute w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] rounded-none overflow-hidden shadow-2xl border border-black/30" style={{ opacity: 0 }}>
-              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=80" alt="Commercial Estate" className="w-full h-full object-cover" />
+              <img src="https://images.adsttc.com/media/images/54cb/16f9/e58e/ce5c/5e00/0338/newsletter/portada_1246_Mondeal_Square_SP_ppt_15.jpg?1422595819" alt="Mondeal Square Ahmedabad" className="w-full h-full object-cover" />
             </div>
           </div>
 

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <!-- Background subtle dark gradient to fit luxury dark site -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Silhouette clip to stay perfectly inside the circle -->
+    <clipPath id="circleClip">
+      <circle cx="200" cy="245" r="125" />
+    </clipPath>
+  </defs>
+
+  <!-- Dark card background -->
+  <rect width="400" height="500" fill="url(#cardBg)" />
+
+  <!-- Instagram Default Avatar (Iconic gray circle with white head and torso) -->
+  <g clip-path="url(#circleClip)">
+    <!-- Base avatar circle (Classic Instagram light gray) -->
+    <circle cx="200" cy="245" r="125" fill="#DBDBDB" />
+
+    <!-- Head (Classic Instagram white) -->
+    <circle cx="200" cy="200" r="42" fill="#FFFFFF" />
+
+    <!-- Shoulders / Torso (Classic Instagram white) -->
+    <path d="M 200 252 C 152 252 110 274 94 318 C 118 350 156 370 200 370 C 244 370 282 350 306 318 C 290 274 248 252 200 252 Z" fill="#FFFFFF" />
+  </g>
+</svg>

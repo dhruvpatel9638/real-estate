@@ -21,7 +21,7 @@ export default function LocationsSection() {
       phone: '+91 98765 43210',
       email: 'info@primeestate-network.com',
       mapUrl: 'https://maps.google.com/?q=Vaishnodevi+Circle+Ahmedabad',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80'
+      image: 'https://images.unsplash.com/photo-1628102491629-778571d893a3?auto=format&fit=crop&w=1200&q=80'
     }
   ];
 

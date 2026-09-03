@@ -83,7 +83,7 @@ export default function Stats() {
       <div className="absolute inset-0 z-0 opacity-40">
         <img
           ref={bgRef}
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1428366890462-dd4baecf492b?auto=format&fit=crop&w=1600&q=80"
           alt="Prime estate abstract"
           className="w-full h-[110%] object-cover object-center grayscale will-change-transform"
         />
