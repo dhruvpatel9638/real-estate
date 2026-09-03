@@ -44,23 +44,35 @@ export default function Partnership() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         <div className="flex flex-col gap-4 sm:gap-6">
           <span className="l1-t font-serif text-[#7a0c07] text-base sm:text-lg">
-            Cooperation investment funds
+            Ahmedabad & Maharashtra Real Estate Network
           </span>
           <div ref={headlineRef} style={{ opacity: 0 }}>
             <h2 className="h1-t text-3xl sm:text-5xl md:text-6xl text-black leading-tight">
-              0 cases of cancellation of transactions due to non-payment
+              0 title disputes across our Gujarat & Maharashtra portfolio
             </h2>
           </div>
           <p ref={descRef} className="l1 text-xs text-neutral-700 leading-relaxed max-w-lg" style={{ opacity: 0 }}>
-            The partner network is one of the pillars of our success. We cooperate with leading institutions and organizations, which ensures a constant flow of solvent clients ready to invest in luxury real estate.
+            Our integrated developer network bridges Ahmedabad's high-growth corridors (Vaishnodevi Circle, S.G. Highway, GIFT City) with Maharashtra's premier luxury real estate hubs (Mumbai, Pune). Partnering directly with top-tier builders ensures 100% verified clear-title estates and high-yield commercial assets.
           </p>
         </div>
 
         <div className="flex flex-col gap-4 sm:gap-6" style={{ perspective: '800px' }}>
           {[
-            { title: 'Guarantee', desc: 'All clients are verified by international banks, eliminating default risks and accelerating transactions.', border: '#7a0c07' },
-            { title: '32%', desc: "of the company's monthly revenue generated directly from our verified global partner network.", border: '#000' },
-            { title: 'Global Partners', desc: 'Major banks, international real estate agencies (USA, England, China, India, UAE), design offices, and luxury travel operators.', border: '#7a0c07' }
+            { 
+              title: 'RERA Assured', 
+              desc: 'Every project across Ahmedabad and Maharashtra is 100% RERA-certified and legally vetted by top property counsels, ensuring zero transaction risk.', 
+              border: '#7a0c07' 
+            },
+            { 
+              title: '45%', 
+              desc: "of our luxury acquisitions in Ahmedabad & GIFT City are driven by HNI and NRI investors from Mumbai, Pune, and Maharashtra.", 
+              border: '#000' 
+            },
+            { 
+              title: 'Twin-State Alliance', 
+              desc: 'Direct developer partnerships with Adani Realty, Godrej Properties, Lodha, Goyal & Co., and Hiranandani across Ahmedabad, GIFT City, Mumbai, and Pune.', 
+              border: '#7a0c07' 
+            }
           ].map((card, i) => (
             <div
               key={i}
