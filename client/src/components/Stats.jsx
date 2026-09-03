@@ -13,8 +13,8 @@ export default function Stats() {
   const [counts, setCounts] = useState({ n1: 0, n2: 0, n3: 0 });
 
   const stats = [
-    { num: 10, suffix: ' Lakh+', text: 'Satisfied clients and families served across Gujarat', color: '#7a0c07' },
-    { num: 2, suffix: 'K Cr+', text: 'Cumulative property value transacted in premier real estate corridors', color: '#ffffff' },
+    { num: 50, suffix: 'K+', text: 'Satisfied clients and families served across Gujarat', color: '#7a0c07' },
+    { num: 500, suffix: '+ Cr', text: 'Cumulative property value transacted in premier real estate corridors', color: '#ffffff' },
     { num: 15, suffix: ' Yrs+', text: 'Legacy of excellence in Indian residential & commercial developments', color: '#7a0c07' },
   ];
 

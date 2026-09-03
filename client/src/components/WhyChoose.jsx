@@ -11,7 +11,7 @@ export default function WhyChoose() {
   const cardsRef = useRef([]);
 
   const benefits = [
-    { title: '10 Lakh+ Client Trust', desc: 'Trusted families and investors served across Gujarat with excellence.' },
+    { title: '50K+ Client Trust', desc: 'Trusted families and investors served across Gujarat with excellence.' },
     { title: 'RERA Approved Deals', desc: '100% legal title clearance and RERA-compliant property transactions.' },
     { title: 'Zero Buyer Commission', desc: 'Direct developer partnerships with transparent zero-commission advisory.' },
     { title: 'Exclusive Pre-Launch Access', desc: 'Invest in premier residential & commercial hubs before public market launch.' },
@@ -54,7 +54,7 @@ export default function WhyChoose() {
           </span>
           <div className="overflow-hidden py-1 sm:py-2 -my-1 sm:-my-2">
             <h2 ref={titleRef} className="d1 text-3xl sm:text-5xl md:text-7xl leading-tight" style={{ opacity: 0, transform: 'translateY(110%)' }}>
-              10 Lakh+ clients, zero commissions, and complete legal transparency
+              50,000+ clients, zero commissions, and complete legal transparency
             </h2>
           </div>
         </div>
