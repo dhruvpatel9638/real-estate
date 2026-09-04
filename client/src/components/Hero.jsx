@@ -135,7 +135,7 @@ export default function Hero() {
         <div ref={bottomBarRef} className="w-full flex flex-col sm:flex-row items-center justify-between pt-4 sm:pt-8 border-t border-white/10 z-20 text-neutral-400 l2 text-center sm:text-left gap-1.5 sm:gap-0 text-[9px] sm:text-xs">
           <div>VAISHNODEVI CIRCLE, AHMEDABAD</div>
           <div className="font-serif italic text-white text-xs sm:text-base">
-            Serving 50,000+ Satisfied Clients Across Gujarat
+            Serving 1 Lakh+ Satisfied Clients Across Gujarat
           </div>
           <div className="hidden sm:block">ESTABLISHED 2010</div>
         </div>
