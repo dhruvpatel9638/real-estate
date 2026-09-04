@@ -19,19 +19,19 @@ export default function TeamSlider() {
       name: "Rajesh Patel",
       role: "Managing Director & Founder",
       bio: "Pioneering luxury real estate developments in Vaishnodevi Circle, Ahmedabad. Over 18 years of expertise in high-end residential estates.",
-      image: "/instagram-default-avatar.svg"
+      image: "/avatar-male.svg"
     },
     {
       name: "Ananya Sharma",
       role: "Head of Luxury Acquisitions",
       bio: "Specializing in ultra-luxury villas and penthouses across Vaishnodevi Circle and S.G. Highway, advising HNI clients globally.",
-      image: "/instagram-default-avatar.svg"
+      image: "/avatar-female.svg"
     },
     {
       name: "Vikram Mehta",
       role: "Chief Investment Officer",
       bio: "Structuring high-yield commercial and residential portfolio investments in Ahmedabad's prime growth corridors.",
-      image: "/instagram-default-avatar.svg"
+      image: "/avatar-male.svg"
     }
   ];
 
@@ -39,11 +39,13 @@ export default function TeamSlider() {
     fetchTeam()
       .then((data) => {
         if (data && data.length) {
-          // ensure each member uses the instagram illustration avatar
-          const formatted = data.map((m) => ({
-            ...m,
-            image: "/instagram-default-avatar.svg"
-          }));
+          const formatted = data.map((m) => {
+            const isFemale = m.name?.toLowerCase().includes('ananya') || m.role?.toLowerCase().includes('acquisitions');
+            return {
+              ...m,
+              image: isFemale ? '/avatar-female.svg' : '/avatar-male.svg'
+            };
+          });
           setTeam(formatted);
         } else {
           setTeam(defaultTeam);

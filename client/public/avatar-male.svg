@@ -1,17 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
   <defs>
+    <!-- Studio Portrait Background Gradient -->
     <linearGradient id="maleBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#E5E7EB" />
       <stop offset="100%" stop-color="#D1D5DB" />
     </linearGradient>
+
     <filter id="cardShadowM" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.08" />
     </filter>
   </defs>
 
+  <!-- Full-card background -->
   <rect width="400" height="500" fill="url(#maleBg)" />
 
+  <!-- Male Profile Silhouette Illustration -->
   <g filter="url(#cardShadowM)">
+    <!-- Broad Masculine Shoulders & Torso -->
     <path d="M 20 500 
              C 30 430, 75 355, 138 328 
              L 165 312 
@@ -24,8 +29,10 @@
              Z" 
           fill="#FFFFFF" />
 
+    <!-- Head Base -->
     <ellipse cx="200" cy="182" rx="66" ry="76" fill="#FFFFFF" />
 
+    <!-- Short Clean Male Hairstyle Contour -->
     <path d="M 134 175 
              C 130 118, 155 92, 200 92 
              C 245 92, 270 118, 266 175 
@@ -36,6 +43,7 @@
           stroke="#E5E7EB" 
           stroke-width="2.5" />
 
+    <!-- Minimalist Suit Collar / Neck Accent -->
     <path d="M 182 315 L 200 345 L 218 315" fill="none" stroke="#D1D5DB" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
   </g>
 </svg>
