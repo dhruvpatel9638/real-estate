@@ -19,7 +19,7 @@ export default function About() {
 
   const honors = [
     { title: '1 LAKH+', desc: 'Trusted clients & happy families served across Gujarat' },
-    { title: '₹7,000 Cr+', desc: 'Cumulative high-yield property transactions in premier Indian corridors' },
+    { title: '₹7K Cr+', desc: 'Cumulative high-yield property transactions in premier Indian corridors' },
     { title: 'TOP-1', desc: 'Leading luxury real estate network in Gujarat' }
   ];
 

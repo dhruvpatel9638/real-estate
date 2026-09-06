@@ -14,7 +14,7 @@ export default function Stats() {
 
   const stats = [
     { num: 1, suffix: ' Lakh+', text: 'Satisfied clients and families served across Gujarat', color: '#7a0c07' },
-    { num: 7000, suffix: '+ Cr', text: 'Cumulative property value transacted (Avg. ₹70 Lakh budget)', color: '#ffffff' },
+    { num: 7, suffix: 'K Cr+', text: 'Cumulative property value transacted (Avg. ₹70 Lakh budget)', color: '#ffffff' },
     { num: 15, suffix: ' Yrs+', text: 'Legacy of excellence in Indian residential & commercial developments', color: '#7a0c07' },
   ];
 
@@ -101,8 +101,8 @@ export default function Stats() {
               className="flex flex-col gap-3 sm:gap-4 border-l-0 md:border-l-2 pl-0 md:pl-8 border-b border-neutral-800 md:border-b-0 pb-6 md:pb-0 items-center md:items-start"
               style={{ borderColor: stat.color, opacity: 0 }}
             >
-              <span className="font-extrabold tracking-tighter" style={{ color: stat.color, fontSize: 'clamp(2.4rem, 5.5vw, 6.5rem)', lineHeight: 0.9, fontFamily: 'var(--font-sans)' }}>
-                {(counts[`n${i}`] ?? 0).toLocaleString('en-IN')}{stat.suffix}
+              <span className="font-extrabold tracking-tighter" style={{ color: stat.color, fontSize: 'clamp(2.6rem, 6.5vw, 7.5rem)', lineHeight: 0.9, fontFamily: 'var(--font-sans)' }}>
+                {(counts[`n${i}`] ?? 0)}{stat.suffix}
               </span>
               <p className="l1 text-xs text-neutral-400 leading-relaxed max-w-xs text-center md:text-left">
                 {stat.text}
